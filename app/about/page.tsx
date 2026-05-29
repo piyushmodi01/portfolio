@@ -101,10 +101,9 @@ export default function AboutPage() {
             <Reveal delay={100}>
               <div className="mt-10 flex flex-col gap-5 max-w-[52ch] text-[1.05rem] leading-[1.7] text-muted">
                 <p>
-                  I started in computer science. Somewhere between the algorithms
-                  and the deadlines, Deloitte noticed I was better at designing
-                  software than building it. They moved me departments. I
-                  didn&apos;t argue.
+                  I started in computer science. But somewhere along the way,
+                  people kept responding to my designs more than my code. I took
+                  the hint.
                 </p>
                 <p>
                   Since then: public sector platforms at Deloitte, e-commerce
@@ -112,7 +111,7 @@ export default function AboutPage() {
                   and MathWorks in Boston, where I shipped features and maintained
                   their design system. Apple came next. These days I design internal
                   platforms across real estate and operations, used by thousands of
-                  people who will never know my name. That&apos;s fine.
+                  people across the company every day.
                 </p>
                 <p>
                   I live in Sacramento with my wife, who reviews and approves design
