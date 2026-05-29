@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 const PRINCIPLES = [
   {
     title: "Decisions over deliverables.",
-    body: "Every artefact should make a decision visible. Mockups that don't move a decision forward are noise.",
+    body: "If a mockup doesn't move a decision forward, it's decoration.",
   },
   {
     title: "The brief is a hypothesis.",
@@ -22,11 +22,11 @@ const PRINCIPLES = [
   },
   {
     title: "Sweat the seams.",
-    body: "The boring transitions between states are where products feel cheap or considered.",
+    body: "The transitions nobody notices are exactly what separates careful from careless.",
   },
   {
     title: "Design for the person who skips everything.",
-    body: "Nobody reads onboarding. Nobody follows the happy path. If it only works for cooperative users, it doesn't work.",
+    body: "Most users ignore onboarding and bypass the happy path. Design for that person, not the cooperative one.",
   },
   {
     title: "Code is a design tool.",
@@ -34,7 +34,7 @@ const PRINCIPLES = [
   },
   {
     title: "Make the hard thing obvious.",
-    body: "Abstraction is a tool, not a goal. Show the thing first, then layer the system.",
+    body: "Show the thing first. Layer the system after.",
   },
 ] as const;
 
