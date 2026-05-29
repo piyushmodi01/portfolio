@@ -2,6 +2,7 @@ import { Container } from "@/components/ui/container";
 import { Eyebrow } from "@/components/ui/eyebrow";
 import { Reveal } from "@/components/ui/reveal";
 import { ButtonLink } from "@/components/ui/button";
+import { SacramentoMap } from "@/components/home/sacramento-map";
 
 export function AboutTeaser() {
   return (
@@ -16,24 +17,20 @@ export function AboutTeaser() {
           <Reveal delay={60}>
             <div>
               <h2 className="display text-[clamp(2rem,5vw,3.4rem)] leading-[1.02] tracking-tight max-w-[22ch]">
-                Designers who care about systems are the ones I want to build
-                with.
+                Good design is invisible. Getting there rarely is.
               </h2>
 
               <div className="mt-8 flex flex-col gap-5 max-w-[54ch] text-[1.02rem] leading-relaxed text-muted">
                 <p>
-                  I&apos;m a product designer based in Sacramento, CA with a
-                  decade of practice across enterprise software, design systems,
-                  and AI-enabled workflows. Since 2025 I&apos;ve been contracting
-                  at Apple, designing internal platforms used by thousands of
-                  employees across real estate, operations, and engineering.
+                  I started in Computer Science. Deloitte moved me into design because they saw
+                  something I hadn&apos;t named yet. Nine years and five
+                  organisations later, I design internal platforms at Apple used by
+                  thousands of employees across real estate and operations.
                 </p>
                 <p>
-                  Before Apple I shipped at MathWorks and Deloitte — places that
-                  forced me to care about scale, edge cases, and the humans who
-                  never read documentation. I believe the best design work is
-                  nearly invisible, deeply considered, and always embarrassingly
-                  simple from the outside.
+                  The technical foundation still pays off every day. I can talk to
+                  engineers in their language, read a schema, and catch the
+                  complexity hiding inside a simple-looking request.
                 </p>
               </div>
 
@@ -45,28 +42,9 @@ export function AboutTeaser() {
             </div>
           </Reveal>
 
-          {/* Right column — portrait placeholder */}
+          {/* Right column — Sacramento map */}
           <Reveal delay={120}>
-            <div className="flex flex-col gap-3">
-              <div
-                className="relative w-full overflow-hidden rounded-2xl border border-border"
-                style={{
-                  aspectRatio: "3/4",
-                  background: "var(--accent-soft)",
-                }}
-              >
-                {/* Subtle inner texture */}
-                <div className="absolute inset-0 grid place-items-center">
-                  <div
-                    className="h-24 w-24 rounded-full opacity-20"
-                    style={{ background: "var(--accent)" }}
-                  />
-                </div>
-              </div>
-              <p className="mono text-[0.75rem] uppercase tracking-[0.16em] text-muted-soft">
-                Sacramento, CA
-              </p>
-            </div>
+            <SacramentoMap />
           </Reveal>
         </div>
       </Container>

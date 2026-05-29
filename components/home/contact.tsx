@@ -35,21 +35,12 @@ export function Contact() {
         <Reveal delay={160}>
           <div className="mt-8 flex flex-wrap items-center gap-4">
             <ButtonLink
-              href="https://linkedin.com/in/piyushmodi"
+              href="https://www.linkedin.com/in/piyushmodi01/"
               variant="ghost"
               size="sm"
               external
             >
               LinkedIn
-            </ButtonLink>
-            <span className="h-4 w-px bg-border" aria-hidden />
-            <ButtonLink
-              href="https://github.com/piyushmodi01"
-              variant="ghost"
-              size="sm"
-              external
-            >
-              GitHub
             </ButtonLink>
             <span className="h-4 w-px bg-border" aria-hidden />
             <ButtonLink href="/resume.pdf" variant="ghost" size="sm" external>

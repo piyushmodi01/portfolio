@@ -94,32 +94,53 @@ export default function AboutPage() {
     <main>
       {/* Hero */}
       <Container className="pt-20 pb-16 md:pt-28 md:pb-24">
-        <AnimatedHeading />
-
-        {/* Bio */}
-        <Reveal delay={100}>
-          <div className="mt-12 grid grid-cols-1 gap-5 max-w-[56ch] text-[1.05rem] leading-[1.7] text-muted">
-            <p>
-              I&apos;m a product designer based in Sacramento, CA with 9+ years
-              across enterprise software, design systems, and AI-enabled
-              workflows. I&apos;m currently contracting at Apple, where I spend
-              my days designing internal platforms used by thousands of employees
-              across real estate, operations, and engineering.
-            </p>
-            <p>
-              The work I care most about sits at intersections: internal tools
-              that engineers actually want to use, design systems that scale
-              without strangling teams, the AI&ndash;design seam where prompts
-              meet production. I also vibe-code things into existence when the
-              problem is too specific to wait for a sprint.
-            </p>
-            <p>
-              What I bring to a team is rigor, taste, and speed — in that order.
-              What I look for is a team willing to care about the same thing.
-              Craft compounds when it&apos;s shared.
-            </p>
+        <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-20 lg:items-start">
+          {/* Left: animated heading + bio */}
+          <div>
+            <AnimatedHeading />
+            <Reveal delay={100}>
+              <div className="mt-10 flex flex-col gap-5 max-w-[52ch] text-[1.05rem] leading-[1.7] text-muted">
+                <p>
+                  I started in computer science. Somewhere between the algorithms
+                  and the deadlines, Deloitte noticed I was better at designing
+                  software than building it. They moved me departments. I
+                  didn&apos;t argue.
+                </p>
+                <p>
+                  Since then: public sector platforms at Deloitte, e-commerce
+                  research at Tapestry, a Human Factors masters at San Jose State,
+                  and MathWorks in Boston, where I shipped features and maintained
+                  their design system. Apple came next. These days I design internal
+                  platforms across real estate and operations, used by thousands of
+                  people who will never know my name. That&apos;s fine.
+                </p>
+                <p>
+                  I live in Sacramento with my wife, who reviews and approves design
+                  plans for the city. Design critique runs in the household. We have
+                  two cats, Zuko and Poppy. Very affectionate — especially around
+                  dinner time.
+                </p>
+              </div>
+            </Reveal>
           </div>
-        </Reveal>
+
+          {/* Right: portrait */}
+          <Reveal delay={80}>
+            <div className="flex flex-col gap-3">
+              <div
+                className="relative w-full overflow-hidden rounded-2xl border border-border"
+                style={{ aspectRatio: "3/4" }}
+              >
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/about/portrait.png"
+                  alt="Piyush with his cat"
+                  className="h-full w-full object-cover object-top"
+                />
+              </div>
+            </div>
+          </Reveal>
+        </div>
       </Container>
 
       {/* Divider */}
