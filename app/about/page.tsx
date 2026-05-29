@@ -17,24 +17,24 @@ const PRINCIPLES = [
     body: "Every artefact should make a decision visible. Mockups that don't move a decision forward are noise.",
   },
   {
+    title: "The brief is a hypothesis.",
+    body: "A good brief tells you what someone thinks is wrong. The right questions tell you what actually is.",
+  },
+  {
     title: "Sweat the seams.",
     body: "The boring transitions between states are where products feel cheap or considered.",
   },
   {
-    title: "Make the hard thing obvious.",
-    body: "Abstraction is a tool, not a goal. Show the thing first, then layer the system.",
-  },
-  {
-    title: "Ship to learn.",
-    body: "Taste sharpens against contact with users. Real artefacts compound, hypotheticals don't.",
+    title: "Design for the person who skips everything.",
+    body: "Nobody reads onboarding. Nobody follows the happy path. If it only works for cooperative users, it doesn't work.",
   },
   {
     title: "Code is a design tool.",
     body: "Prototyping in code surfaces problems Figma hides.",
   },
   {
-    title: "Restraint reads as seniority.",
-    body: "Knowing what to leave out is the harder skill.",
+    title: "Make the hard thing obvious.",
+    body: "Abstraction is a tool, not a goal. Show the thing first, then layer the system.",
   },
 ] as const;
 
