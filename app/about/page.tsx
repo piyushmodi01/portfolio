@@ -153,8 +153,9 @@ export default function AboutPage() {
         </Reveal>
         <Reveal delay={60}>
           <h2 className="display mt-4 text-[clamp(2rem,5vw,3.6rem)] leading-[1.05] tracking-tight max-w-[18ch]">
-            How I work.
+            Things I actually believe.
           </h2>
+          <p className="mt-3 text-[0.85rem] text-muted md:hidden">Tap a card to flip it.</p>
         </Reveal>
 
         <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
