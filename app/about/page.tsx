@@ -4,6 +4,7 @@ import { Eyebrow } from "@/components/ui/eyebrow";
 import { Reveal } from "@/components/ui/reveal";
 import { ButtonLink } from "@/components/ui/button";
 import { AnimatedHeading } from "@/components/about/animated-heading";
+import { PrincipleCard } from "@/components/about/principle-card";
 
 export const metadata: Metadata = {
   title: "About",
@@ -25,7 +26,7 @@ const PRINCIPLES = [
     body: "The transitions nobody notices are exactly what separates careful from careless.",
   },
   {
-    title: "Design for the person who skips everything.",
+    title: "Nobody follows the happy path.",
     body: "Most users ignore onboarding and bypass the happy path. Design for that person, not the cooperative one.",
   },
   {
@@ -159,14 +160,7 @@ export default function AboutPage() {
         <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {PRINCIPLES.map((p, i) => (
             <Reveal key={p.title} delay={i * 60}>
-              <div className="flex flex-col gap-3 rounded-2xl border border-border bg-bg-elevated p-6">
-                <p className="display text-[1.25rem] leading-tight tracking-tight text-ink">
-                  {p.title}
-                </p>
-                <p className="text-[0.93rem] leading-relaxed text-muted">
-                  {p.body}
-                </p>
-              </div>
+              <PrincipleCard title={p.title} body={p.body} />
             </Reveal>
           ))}
         </div>
