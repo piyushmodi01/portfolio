@@ -39,7 +39,6 @@ It's not a dramatic problem. Nobody files a ticket saying "this is broken." It's
 
 <Moment
   video="/work/matlab/02-problem-statement.mp4"
-  poster="https://picsum.photos/seed/matlab-problem/1600/1000"
   caption="The default MATLAB experience: run code, get floating windows, arrange them manually. Run again, lose everything."
   rationale="The friction was invisible because engineers had adapted to it. The job was to surface what they'd stopped questioning."
 />
@@ -51,12 +50,18 @@ It's not a dramatic problem. Nobody files a ticket saying "this is broken." It's
 />
 
 <Prose>
-The engineering team had built a Tab and Tile View: a smarter layout where all plots live in a single window as tabs, and a single click arranges them all into a clean grid. No more floating windows. No more manual rearranging.
+The engineering team had already built a fix: Tab and Tile View. All plots in one window as tabs, one click to arrange them all into a grid. No floating windows, no manual rearranging.
 
-A researcher ran a usability study to test it before Beta launch. She gave 7 engineers one task: find the feature that lets you arrange all your plots into a grid view. Five to six minutes. Only 1 out of 7 found it. Some asked for hints. The rest gave up.
+Before Beta, a researcher gave 7 engineers one task: find the feature that arranges all your plots into a grid view. Five minutes. Only 1 found it. The rest gave up or asked for hints.
 
-The feature was there. It was buried in a 3-dot menu under the label "Tile All", a phrase that meant nothing to someone looking for a grid arrangement. The language and the mental model never connected.
+The feature was buried in a 3-dot menu under the label "Tile All." That phrase meant nothing to someone looking for a grid arrangement. One label. Two completely different mental models.
 </Prose>
+
+<Moment
+  video="/work/matlab/03-tab-tile-before.mp4"
+  alt="The original MATLAB tab view with the confusing Tile All menu"
+  caption="The original experience: plots are combined into tabs, but finding the grid arrangement requires navigating to 'Tile All', then manually clicking a grid of squares to choose a layout. Nobody made that connection."
+/>
 
 <TickerGroup
   m1value="7" m1label="engineers given the task of finding the feature"
@@ -69,7 +74,7 @@ The feature was there. It was buried in a 3-dot menu under the label "Tile All",
 </Pull>
 
 <Prose>
-The feature worked. Users loved it the moment they saw it. The entire design problem was a single, specific thing: the label "Tile All" didn't connect to "arrange my plots in a grid" in an engineer's head. That gap between what the feature did and what it was called was what I was brought in to close.
+The feature worked. Users loved it the moment they saw it. But the problem was never just the label. Even engineers who found "Tile All" hit a second wall: a submenu with radio buttons and a manual grid picker — Single, Left/Right, Top/Bottom, then a 5x5 grid of squares to choose a layout. Like inserting a table in Word. Nobody connected that to "arrange my plots." The label sent them to the wrong place, and the interaction confirmed they were lost. Both problems needed fixing.
 </Prose>
 
 <Tension
@@ -93,7 +98,11 @@ Before exploring solutions, I studied how other tools handle tabbed layouts and 
 
 <Moment
   video="/work/matlab/04-benchmarking.mp4"
-  poster="https://picsum.photos/seed/matlab-bench/1600/1000"
+  playbackRate={0.4}
+  aspectRatio="auto"
+  cropTop={33}
+  cropBottom={33}
+  fadeEdges
   caption="Competitive benchmarking: how tools engineers already use handle tabbed layouts and view switching. Finding the patterns that already live in their mental model."
   rationale="If users already know how to do something in another tool, meeting that expectation reduces the learning curve to near zero."
 />
@@ -104,6 +113,8 @@ Then: prioritisation. More things worth improving than time to improve them. I m
 
 <Moment
   video="/work/matlab/05-impact-effort-matrix.mp4"
+  aspectRatio="auto"
+  size="md"
   caption="Impact-Effort Matrix: every possible improvement as a sticky note, four named cursors representing the team. 'Quick switching between views' landed in High Impact / Low Effort. Unanimous."
   rationale="When there are more problems than time, the scope decision needs to be made together. A shared framework means no debate mid-sprint about what we're solving."
 />
@@ -128,13 +139,6 @@ That question reframed everything. I stopped asking what the ideal solution look
 
 The answer was a checkbox. Not glamorous, but a checkbox was already used throughout MATLAB's menus. Engineers knew how to read it. It fit the design system. The codebase could support it. Check it and the system picks the best grid layout automatically. No more choosing between 2x3 and 3x3. No more manual configuration.
 </Prose>
-
-<Moment
-  video="/work/matlab/03-tab-tile-before.mp4"
-  poster="https://picsum.photos/seed/matlab-before/1600/1000"
-  alt="The original MATLAB tab view with the confusing Tile All menu"
-  caption="The original experience: plots are combined into tabs, but finding the grid arrangement requires navigating to 'Tile All', then manually clicking a grid of squares to choose a layout, like inserting a table in Word. Nobody made that connection."
-/>
 
 <Moment
   video="/work/matlab/06-context-menu-redesign.mp4"
