@@ -66,7 +66,6 @@ The feature was buried in a 3-dot menu under the label "Tile All." That phrase m
 <TickerGroup
   m1value="7" m1label="engineers given the task of finding the feature"
   m2value="1" m2label="found it without guidance, in five minutes"
-  m3value="10" m3suffix="+" m3label="design directions explored to fix it before finding the one that worked"
 />
 
 <Pull>
@@ -74,17 +73,8 @@ The feature was buried in a 3-dot menu under the label "Tile All." That phrase m
 </Pull>
 
 <Prose>
-The feature worked. Users loved it the moment they saw it. But the problem was never just the label. Even engineers who found "Tile All" hit a second wall: a submenu with radio buttons and a manual grid picker — Single, Left/Right, Top/Bottom, then a 5x5 grid of squares to choose a layout. Like inserting a table in Word. Nobody connected that to "arrange my plots." The label sent them to the wrong place, and the interaction confirmed they were lost. Both problems needed fixing.
+The feature worked. Users loved it the moment they saw it. But the problem was never just the label. Even engineers who found "Tile All" hit a second wall: a submenu with radio buttons and a manual grid picker - Single, Left/Right, Top/Bottom, then a 5x5 grid of squares to choose a layout. Like inserting a table in Word. Nobody connected that to "arrange my plots." The label sent them to the wrong place, and the interaction confirmed they were lost. Both problems needed fixing.
 </Prose>
-
-<Tension
-  beforeLabel="What engineers experienced"
-  beforeTitle="Floating windows, manual arrangement, and a menu nobody fully understood."
-  beforeBody="'Tile All' was in the 3-dot menu. Nobody connected it to 'arrange my plots in a grid.' The feature existed. The language around it didn't."
-  afterLabel="What they needed"
-  afterTitle="One action. System picks the best layout. Every plot arranged instantly."
-  afterBody="The goal wasn't redesigning MATLAB. It was making one feature findable and usable for the engineers who needed it every single day."
-/>
 
 <Chapter
   number="03"
@@ -150,7 +140,8 @@ The answer was a checkbox. Not glamorous, but a checkbox was already used throug
 <Moment
   image="/work/matlab/10-feature-cleanup.png"
   alt="Alphabetize and Tab Position removed from the context menu"
-  caption="Alphabetize and Tab Position: removed entirely. Both were present in every session but used by almost nobody, and cluttered the menu for the options that actually mattered."
+  caption="Alphabetize and Tab Position: removed entirely. Both were present in every session but used by almost nobody."
+  rationale="Removing low-use options reduces noise and makes the feature that actually mattered easier to find. A shorter menu is a more confident menu."
 />
 
 <Decision label="The decision that defined the redesign">
@@ -169,11 +160,21 @@ The answer was a checkbox. Not glamorous, but a checkbox was already used throug
 />
 
 <Prose>
-When I presented the redesign, the developers who'd worked on that part of MATLAB for years were the ones whose eyes lit up first. They knew the users better than anyone. Their reaction was the real validation, more meaningful than any test result.
+The redesign shipped. One checkbox. The system picks the layout. Engineers who spent 35 to 45 seconds manually arranging plots were doing it in 5 to 8. The feature that 6 out of 7 engineers couldn't find became the first thing they reached for.
+
+When I presented the final design, the developers who had maintained that part of MATLAB for years were the ones who reacted first. Not the PM, not the researcher. The people closest to the code. They knew what the users had been dealing with - and they knew this fixed it. That reaction meant more than any test result.
 </Prose>
 
+<Moment
+  video="/work/matlab/06-context-menu-redesign.mp4"
+  poster="/work/matlab/07-feature-tiled-view.png"
+  alt="The final Tiled View feature in action"
+  caption="Before: floating windows, manual arrangement, a buried menu nobody understood. After: one checkbox, one click, plots arranged instantly."
+  rationale="The engineer from Chapter 01 - the one who ran code and lost everything - now runs the same code and gets a tiled layout waiting for them. That's the fix."
+/>
+
 <TickerGroup
-  m1value="1" m1label="out of 7 engineers found the feature, before the redesign"
+  m1value="1" m1label="out of 7 engineers found the feature before the redesign"
   m2value="65" m2suffix="%" m2label="faster plot arrangement: 35-45 seconds dropped to 5-8 in research sessions"
   m3value="10" m3suffix="+" m3label="design directions explored to find the one that worked within the constraints"
 />
