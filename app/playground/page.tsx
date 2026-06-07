@@ -21,16 +21,16 @@ type PlaygroundItem = {
 const ITEMS: PlaygroundItem[] = [
   {
     tag: "Plugin",
-    title: "Apple Accessibility Checker",
+    title: "Accessibility Checker",
     description:
       "Bookmarklet + Sketch plugin that audits visible text, contrast, and structure across designs and live web.",
     status: "Live",
   },
   {
     tag: "Tool",
-    title: "Atlas Grid Builder",
+    title: "AG-Grid Builder",
     description:
-      "React tool that lets designers compose AG Grid tables visually and export them to Sketch as SVG.",
+      "Vibe-coded React tool that lets designers build AG Grid tables via code and import them directly into Sketch.",
     status: "Live",
   },
   {
@@ -56,9 +56,9 @@ const ITEMS: PlaygroundItem[] = [
   },
   {
     tag: "Plugin",
-    title: "Atlas Dark Mode",
+    title: "Dark Mode Switch",
     description:
-      "Experimental dark-mode switcher for the Atlas design system.",
+      "Experimental dark-mode switcher for internal design systems — flip designs into their dark-mode equivalents without manual token swaps.",
     status: "In-progress",
   },
 ];
