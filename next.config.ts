@@ -1,6 +1,8 @@
 import type { NextConfig } from "next";
 import path from "node:path";
 
+const isDev = process.env.NODE_ENV === "development";
+
 const securityHeaders = [
   { key: "X-Content-Type-Options", value: "nosniff" },
   { key: "X-Frame-Options", value: "SAMEORIGIN" },
@@ -11,11 +13,14 @@ const securityHeaders = [
     key: "Content-Security-Policy",
     value: [
       "default-src 'self'",
-      "script-src 'self' 'unsafe-inline'", // unsafe-inline needed for JSON-LD and Next.js inline scripts
+      // unsafe-eval only in dev (React error overlays); unsafe-inline for JSON-LD + Next.js hydration
+      `script-src 'self' 'unsafe-inline'${isDev ? " 'unsafe-eval'" : ""}`,
       "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
       "font-src 'self' https://fonts.gstatic.com",
-      "img-src 'self' data: blob:",
-      "connect-src 'self'",
+      // blob: for Leaflet canvas tiles; cartocdn for map tiles
+      "img-src 'self' data: blob: https://*.basemaps.cartocdn.com",
+      // cartocdn websocket/xhr for tile fetching
+      "connect-src 'self' https://*.basemaps.cartocdn.com",
       "frame-ancestors 'none'",
       "base-uri 'self'",
       "form-action 'self'",

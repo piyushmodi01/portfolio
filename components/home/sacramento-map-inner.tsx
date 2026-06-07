@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import type { Map } from "leaflet";
+import "leaflet/dist/leaflet.css";
 
 const SACRAMENTO = { lat: 38.5816, lng: -121.4944 };
 const APPLE_MAPS_URL =
@@ -20,8 +21,6 @@ export default function SacramentoMapInner() {
       // Guard against StrictMode double-invoke and already-initialised containers
       if (cancelled || !containerRef.current) return;
       if ((containerRef.current as HTMLDivElement & { _leaflet_id?: number })._leaflet_id) return;
-
-      import("leaflet/dist/leaflet.css" as string);
 
       const map = L.map(containerRef.current, {
         center: [SACRAMENTO.lat, SACRAMENTO.lng],
