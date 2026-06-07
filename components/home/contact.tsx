@@ -17,7 +17,7 @@ export function Contact() {
 
         <Reveal delay={60}>
           <h2 className="display mt-6 text-[clamp(2.4rem,7vw,5.2rem)] leading-[1.0] tracking-tight max-w-[22ch]">
-            Let&apos;s build something quiet, considered, and well-made.
+            Good work starts with a good conversation.
           </h2>
         </Reveal>
 
