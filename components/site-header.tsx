@@ -9,6 +9,7 @@ import { Logo } from "@/components/ui/logo";
 const NAV = [
   { href: "/#work", label: "Work" },
   { href: "/about", label: "About" },
+  { href: "/blog", label: "Notes" },
   { href: "/#contact", label: "Contact" },
 ];
 
@@ -66,7 +67,7 @@ export function SiteHeader() {
             </Link>
           ))}
           <a
-            href="/resume.pdf"
+            href="/resume.html"
             download
             className="inline-flex items-center gap-1.5 rounded-full border border-border-strong bg-bg-elevated px-3.5 py-1.5 text-[0.82rem] font-medium text-ink-soft transition-colors hover:border-ink hover:text-ink"
           >
@@ -87,7 +88,7 @@ export function SiteHeader() {
 
       {/* Mobile menu */}
       {open ? (
-        <div className="md:hidden fixed inset-x-0 top-16 bottom-0 z-40 bg-bg">
+        <div className="md:hidden absolute left-0 right-0 top-full z-40 bg-bg min-h-[calc(100dvh-4rem)]">
           <nav
             aria-label="Mobile primary"
             className="container-x flex flex-col gap-1 pt-6 pb-12"
@@ -104,13 +105,14 @@ export function SiteHeader() {
               </Link>
             ))}
             <a
-              href="/resume.pdf"
-              download
+              href="/resume.html"
+              target="_blank"
+              rel="noopener noreferrer"
               onClick={() => setOpen(false)}
               className="font-display text-[2.25rem] font-medium tracking-tight py-3 text-ink"
               style={{ animation: `fadeUp 0.5s ${NAV.length * 0.04}s both var(--ease-out-soft)` }}
             >
-              Resume ↓
+              Resume ↗
             </a>
           </nav>
         </div>

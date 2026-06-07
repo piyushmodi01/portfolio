@@ -25,6 +25,7 @@ export const WORK_TILES: WorkTile[] = [
       "Senior product design across internal tools and design systems for engineering, real-estate, and operations teams.",
     year: "2025 — Present",
     scope: ["Product Design", "Design Systems", "AI-enabled Workflows"],
+    cover: "/work/apple/hero.png",
     accentTint:
       "linear-gradient(135deg, rgba(42,75,255,0.12) 0%, rgba(17,17,17,0.06) 100%)",
   },
@@ -48,6 +49,7 @@ export const WORK_TILES: WorkTile[] = [
       "Built a reusable Salesforce form system that removed the engineering dependency from every new government engagement — and became a Deloitte sales asset.",
     year: "2019 — Ongoing",
     scope: ["Product Design", "Systems Design", "Government UX"],
+    cover: "/work/deloitte/hero.png",
     accentTint:
       "linear-gradient(135deg, rgba(31,95,77,0.12) 0%, rgba(17,17,17,0.06) 100%)",
   },

@@ -6,7 +6,7 @@ import { SacramentoMap } from "@/components/home/sacramento-map";
 
 export function AboutTeaser() {
   return (
-    <section id="about" aria-label="About" className="relative py-24 md:py-36">
+    <section id="about" aria-label="About" className="relative py-24 md:py-36 bg-[#ede9e0]">
       <Container>
         <Reveal>
           <Eyebrow number="02">About</Eyebrow>
@@ -44,7 +44,9 @@ export function AboutTeaser() {
 
           {/* Right column — Sacramento map */}
           <Reveal delay={120}>
-            <SacramentoMap />
+            <div className="rounded-2xl overflow-hidden ring-1 ring-black/8">
+              <SacramentoMap />
+            </div>
           </Reveal>
         </div>
       </Container>

@@ -43,7 +43,7 @@ export function Contact() {
               LinkedIn
             </ButtonLink>
             <span className="h-4 w-px bg-border" aria-hidden />
-            <ButtonLink href="/resume.pdf" variant="ghost" size="sm" external>
+            <ButtonLink href="/resume.html" variant="ghost" size="sm" external>
               Resume
             </ButtonLink>
           </div>

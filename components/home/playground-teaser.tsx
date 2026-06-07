@@ -12,9 +12,9 @@ type PlaygroundCard = {
 
 const CARDS: PlaygroundCard[] = [
   {
-    title: "Apple Accessibility Checker",
+    title: "Accessibility Audit",
     description:
-      "Bookmarklet + Sketch plugin that audits visible text, contrast, and structure.",
+      "Bookmarklet and Sketch plugin that audit designs against accessibility guidelines, covering both implemented and in-progress work.",
     status: "Live",
   },
   {
@@ -60,7 +60,7 @@ export function PlaygroundTeaser() {
 
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
           {CARDS.map((card, i) => (
-            <Reveal key={card.title} delay={i * 80}>
+            <Reveal key={card.title} delay={i * 80} className="h-full">
               <PlaygroundCard card={card} />
             </Reveal>
           ))}
@@ -82,7 +82,7 @@ function PlaygroundCard({ card }: { card: PlaygroundCard }) {
   const isLive = card.status === "Live";
 
   return (
-    <div className="flex flex-col gap-4 rounded-2xl border border-border bg-bg-elevated p-6 transition-colors duration-200 hover:border-border-strong">
+    <div className="flex flex-col gap-4 rounded-2xl border border-border bg-bg-elevated p-6 transition-colors duration-200 hover:border-border-strong h-full">
       {/* Accent dot */}
       <div
         className="h-2 w-2 rounded-full"

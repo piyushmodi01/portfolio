@@ -1,3 +1,4 @@
+import { ProseWithImage } from "@/components/case-study/prose-with-image";
 import { Cover } from "@/components/case-study/cover";
 import { Snapshot } from "@/components/case-study/snapshot";
 import { Chapter } from "@/components/case-study/chapter";
@@ -15,6 +16,7 @@ import { MarqueeStrip } from "@/components/case-study/marquee-strip";
 import { StackedCards } from "@/components/case-study/stacked-cards";
 
 export const caseStudyMdxComponents = {
+  ProseWithImage,
   Cover,
   Snapshot,
   Chapter,

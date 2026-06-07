@@ -17,7 +17,7 @@ export function Walkthrough({
         </p>
         <p className="mt-4 max-w-[40rem] text-[1rem] leading-relaxed text-muted">
           I&apos;m happy to walk through the work live — covering process, decisions,
-          and screens that aren&apos;t public. No artefacts leave the call.
+          and designs.
         </p>
         <div className="mt-7 flex flex-wrap gap-3">
           <ButtonLink href={`mailto:${email}?subject=Walkthrough%20request`} variant="primary">

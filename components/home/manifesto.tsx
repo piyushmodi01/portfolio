@@ -3,17 +3,10 @@
 import { useEffect, useRef, useState } from "react";
 
 /**
- * Manifesto — pinned, scroll-driven word reveal.
- *
- * On desktop/tablet (≥768px): section is 200vh tall, inner content is sticky at
- *   center viewport. As the user scrolls through the section, scroll progress
- *   maps 0 → 1 and reveals words sequentially.
- *
- * On mobile (<768px): no pin (sticky positioning is heavy on mobile and
- *   competes with the address bar). Words reveal once via IntersectionObserver
- *   when the section enters the viewport.
- *
- * Reduced-motion: all words visible immediately when the section enters view.
+ * Manifesto — pinned, scroll-driven word reveal on all screen sizes.
+ * Section is 150vh on mobile / 200vh on desktop. Inner content is sticky,
+ * scroll progress maps 0→1 and reveals words sequentially.
+ * Reduced-motion: all words visible immediately.
  */
 
 const PHRASES: string[] = [
@@ -37,16 +30,12 @@ export function Manifesto() {
       "(prefers-reduced-motion: reduce)"
     ).matches;
 
-    const isDesktop = () => window.matchMedia("(min-width: 768px)").matches;
-
     if (reduced) {
       setRevealed(PHRASES.length);
       return;
     }
 
     let raf = 0;
-    let mode: "scroll" | "io" = isDesktop() ? "scroll" : "io";
-    let ioTids: ReturnType<typeof setTimeout>[] = [];
 
     const update = () => {
       const rect = section.getBoundingClientRect();
@@ -69,19 +58,10 @@ export function Manifesto() {
       });
     };
 
-    let io: IntersectionObserver | null = null;
-
     const teardownScroll = () => {
       window.removeEventListener("scroll", onScroll);
       if (raf) cancelAnimationFrame(raf);
       raf = 0;
-    };
-
-    const teardownIO = () => {
-      if (io) io.disconnect();
-      io = null;
-      ioTids.forEach(clearTimeout);
-      ioTids = [];
     };
 
     const setupScroll = () => {
@@ -89,41 +69,17 @@ export function Manifesto() {
       update();
     };
 
-    const setupIO = () => {
-      io = new IntersectionObserver(
-        (entries) => {
-          if (entries[0]?.isIntersecting) {
-            PHRASES.forEach((_, i) => {
-              ioTids.push(
-                setTimeout(() => setRevealed((r) => Math.max(r, i + 1)), i * 220)
-              );
-            });
-            io?.disconnect();
-          }
-        },
-        { threshold: 0.25 }
-      );
-      io.observe(section);
-    };
-
-    if (mode === "scroll") setupScroll();
-    else setupIO();
+    setupScroll();
 
     const onResize = () => {
-      const next: "scroll" | "io" = isDesktop() ? "scroll" : "io";
-      if (next === mode) return;
-      if (mode === "scroll") teardownScroll();
-      else teardownIO();
-      mode = next;
       setRevealed(0);
-      if (mode === "scroll") setupScroll();
-      else setupIO();
+      teardownScroll();
+      setupScroll();
     };
     window.addEventListener("resize", onResize);
 
     return () => {
       teardownScroll();
-      teardownIO();
       window.removeEventListener("resize", onResize);
     };
   }, []);
@@ -133,9 +89,9 @@ export function Manifesto() {
       ref={sectionRef}
       id="manifesto"
       aria-label="Manifesto"
-      className="relative md:h-[200vh]"
+      className="relative h-[150vh] md:h-[200vh]"
     >
-      <div className="md:sticky md:top-0 md:flex md:h-screen md:items-center">
+      <div className="sticky top-0 flex h-screen items-center">
         <div className="container-x py-24 md:py-0">
           <p className="eyebrow mb-8 md:mb-12">A note on craft</p>
           <p className="display text-[clamp(2rem,6vw,4.6rem)] leading-[1.04] tracking-tight text-ink max-w-[24ch]">

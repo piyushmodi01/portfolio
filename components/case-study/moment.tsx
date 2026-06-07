@@ -62,7 +62,7 @@ export function Moment({
 
   const containerStyle: React.CSSProperties = {
     ...(!hasMedia && tint ? { background: tint } : {}),
-    ...(isNatural ? { minHeight: "80px" } : { aspectRatio }),
+    ...(isNatural ? {} : { aspectRatio }),
   };
 
   const mediaStyle: React.CSSProperties = hasCrop
@@ -74,11 +74,11 @@ export function Moment({
       <Reveal>
         <figure className={`flex flex-col gap-6 ${sizeClass[size]}`}>
           <div
-            className="group relative w-full overflow-hidden rounded-2xl border border-border bg-bg-elevated"
+            className={`group relative w-full overflow-hidden rounded-2xl border border-border ${isNatural ? "" : "bg-bg-elevated"}`}
             style={containerStyle}
           >
             {video ? (
-              <div style={mediaStyle} className="h-full w-full">
+              <div style={mediaStyle} className={isNatural ? "w-full" : "h-full w-full"}>
                 <VideoPlayer
                   src={video}
                   poster={poster}
@@ -92,7 +92,11 @@ export function Moment({
                 src={image}
                 alt={alt ?? ""}
                 style={mediaStyle}
-                className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.025]"
+                className={
+                  isNatural
+                    ? "w-full object-contain transition-transform duration-700 ease-out group-hover:scale-[1.025]"
+                    : "h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.025]"
+                }
               />
             ) : (
               <div className="absolute inset-0 grid place-items-center">
@@ -119,7 +123,16 @@ export function Moment({
 
           <figcaption className="grid grid-cols-1 gap-x-12 gap-y-3 md:grid-cols-[1.4fr_1fr]">
             <p className="mono text-[0.8rem] leading-relaxed text-muted">
-              {caption}
+              {(() => {
+                const idx = caption.indexOf(":");
+                if (idx === -1) return caption;
+                return (
+                  <>
+                    <span className="text-ink">{caption.slice(0, idx)}:</span>
+                    {caption.slice(idx + 1)}
+                  </>
+                );
+              })()}
             </p>
             {rationale && (
               <p className="border-l border-border pl-4 text-[0.95rem] leading-relaxed text-muted md:border-l-0 md:pl-0 md:pt-1">

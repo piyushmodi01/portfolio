@@ -21,9 +21,12 @@ export async function generateMetadata(props: {
   return {
     title: `${cs.client} — ${cs.title}`,
     description: cs.summary,
+    alternates: { canonical: `https://piyushmodi.com/work/${slug}` },
     openGraph: {
       title: `${cs.client} — ${cs.title}`,
       description: cs.summary,
+      url: `https://piyushmodi.com/work/${slug}`,
+      type: "article",
     },
   };
 }

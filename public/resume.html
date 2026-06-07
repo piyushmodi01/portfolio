@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Piyush Modi — Resume</title>
+<style>
+  :root {
+    --bg: #fafaf7;
+    --bg-elevated: #ffffff;
+    --ink: #111111;
+    --ink-soft: #1c1c1c;
+    --muted: #5c5c66;
+    --muted-soft: #8a8a93;
+    --border: rgba(0,0,0,0.09);
+    --border-strong: rgba(0,0,0,0.16);
+    --accent: #2a4bff;
+    --accent-soft: rgba(42,75,255,0.07);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    font-size: 9pt;
+    line-height: 1.5;
+  }
+
+  .page {
+    width: 210mm;
+    min-height: 297mm;
+    margin: 0 auto;
+    background: var(--bg-elevated);
+    padding: 13mm 14mm 11mm;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* ---------- Header ---------- */
+  .header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding-bottom: 8px;
+    border-bottom: 1.5px solid var(--ink);
+    margin-bottom: 13px;
+  }
+
+  .name {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 25pt;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    line-height: 1;
+    color: var(--ink);
+  }
+
+  .header-right {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+
+  .headline {
+    font-size: 8pt;
+    color: var(--muted);
+    letter-spacing: 0.01em;
+  }
+
+  .contact-row {
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+    font-size: 6.5pt;
+    color: var(--muted);
+    letter-spacing: 0.05em;
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+  }
+
+  .contact-row a { color: var(--muted); text-decoration: none; }
+
+  /* ---------- Body grid ---------- */
+  .body {
+    display: grid;
+    grid-template-columns: 50mm 1fr;
+    gap: 0 11mm;
+    flex: 1;
+  }
+
+  .sidebar { display: flex; flex-direction: column; gap: 12px; }
+  .main    { display: flex; flex-direction: column; gap: 12px; }
+
+  /* ---------- Section labels ---------- */
+  .section-label {
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+    font-size: 6pt;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--muted-soft);
+    margin-bottom: 6px;
+    padding-bottom: 3px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  /* ---------- Experience ---------- */
+  .role { margin-bottom: 9px; }
+  .role:last-child { margin-bottom: 0; }
+
+  .role-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 6px;
+    margin-bottom: 1px;
+  }
+
+  .company {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 10pt;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    color: var(--ink);
+    line-height: 1.2;
+  }
+
+  .period {
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+    font-size: 6pt;
+    letter-spacing: 0.08em;
+    color: var(--muted-soft);
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .role-title {
+    font-size: 7pt;
+    letter-spacing: 0.04em;
+    color: var(--muted);
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-bottom: 3px;
+  }
+
+  .bullets {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5px;
+  }
+
+  .bullets li {
+    font-size: 8pt;
+    color: var(--ink-soft);
+    line-height: 1.5;
+    padding-left: 10px;
+    position: relative;
+  }
+
+  .bullets li::before {
+    content: "–";
+    position: absolute;
+    left: 0;
+    color: var(--muted-soft);
+  }
+
+  .h { font-weight: 600; color: var(--ink); }
+
+  /* ---------- Sidebar ---------- */
+  .sidebar-company {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 8.5pt;
+    font-weight: 400;
+    color: var(--ink);
+    line-height: 1.3;
+    margin-bottom: 1px;
+  }
+
+  .sidebar-sub {
+    font-size: 7pt;
+    color: var(--muted);
+    line-height: 1.4;
+    margin-bottom: 6px;
+  }
+
+  .sidebar-sub:last-child { margin-bottom: 0; }
+
+  /* ---------- Skills ---------- */
+  .skill-group { margin-bottom: 8px; }
+  .skill-group:last-child { margin-bottom: 0; }
+
+  .skill-group-label {
+    font-size: 6.5pt;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    color: var(--muted-soft);
+    margin-bottom: 4px;
+  }
+
+  .pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3px;
+  }
+
+  .pill {
+    font-size: 7pt;
+    color: var(--muted);
+    background: var(--bg);
+    border: 1px solid var(--border-strong);
+    border-radius: 100px;
+    padding: 2px 7px;
+    line-height: 1.4;
+  }
+
+  /* Accent pill for highlighted skills */
+  .pill-accent {
+    font-size: 7pt;
+    color: var(--accent);
+    background: var(--accent-soft);
+    border: 1px solid rgba(42,75,255,0.18);
+    border-radius: 100px;
+    padding: 2px 7px;
+    line-height: 1.4;
+    font-weight: 500;
+  }
+
+
+  /* ---------- Portfolio note ---------- */
+  .portfolio-note {
+    font-size: 7.5pt;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+
+  .portfolio-note a {
+    color: var(--accent);
+    font-weight: 500;
+    text-decoration: none;
+  }
+
+  /* ---------- Print ---------- */
+  @media print {
+    body { background: white; }
+    .page {
+      width: 100%;
+      min-height: auto;
+      margin: 0;
+      padding: 11mm 13mm 10mm;
+      box-shadow: none;
+    }
+  }
+
+  @page { size: A4; margin: 0; }
+
+  /* ---------- Print button ---------- */
+  .print-btn {
+    position: fixed;
+    bottom: 28px;
+    right: 28px;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    background: var(--ink);
+    color: #fff;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    font-size: 8pt;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    padding: 9px 16px;
+    border: none;
+    border-radius: 100px;
+    cursor: pointer;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.18);
+    transition: background 0.15s, transform 0.15s;
+  }
+
+  .print-btn:hover { background: #2a4bff; transform: translateY(-1px); }
+
+  @media print {
+    .print-btn { display: none; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- Header -->
+  <header class="header">
+    <div class="name">Piyush Modi</div>
+    <div class="header-right">
+      <div class="headline">Senior Product Designer &nbsp;·&nbsp; Internal Tools &nbsp;·&nbsp; Design Systems &nbsp;·&nbsp; AI-enabled UX</div>
+      <div class="contact-row">
+        <span>Sacramento, CA</span>
+        <a href="mailto:piyushmodi01@gmail.com">piyushmodi01@gmail.com</a>
+        <a href="https://piyushmodi.com">piyushmodi.com</a>
+        <a href="https://linkedin.com/in/piyushmodi01">linkedin/piyushmodi01</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="body">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+
+      <section>
+        <div class="section-label">Education</div>
+        <div class="sidebar-company">San Jose State University</div>
+        <div class="sidebar-sub">MS, Human-Computer Interaction</div>
+        <div class="sidebar-company">Symbiosis International University</div>
+        <div class="sidebar-sub" style="margin-bottom:0">BCA, Computer Applications</div>
+      </section>
+
+      <section>
+        <div class="section-label">Skills</div>
+
+        <div class="skill-group">
+          <div class="skill-group-label">Design</div>
+          <div class="pills">
+            <span class="pill">Enterprise UX</span>
+            <span class="pill">Interaction Design</span>
+            <span class="pill">Design Systems</span>
+            <span class="pill">iOS Design</span>
+            <span class="pill">Usability Research</span>
+            <span class="pill">Prototyping</span>
+            <span class="pill">Responsive Design</span>
+            <span class="pill">Accessibility</span>
+            <span class="pill">Design Thinking</span>
+          </div>
+        </div>
+
+        <div style="height:6px"></div>
+
+        <div class="skill-group">
+          <div class="skill-group-label">Tools</div>
+          <div class="pills">
+            <span class="pill">Sketch</span>
+            <span class="pill">Figma</span>
+            <span class="pill">Adobe Illustrator</span>
+            <span class="pill">HTML / CSS</span>
+            <span class="pill">Framer</span>
+            <span class="pill">Salesforce</span>
+          </div>
+        </div>
+
+        <div style="height:6px"></div>
+
+        <div class="skill-group">
+          <div class="skill-group-label">AI &amp; Emerging</div>
+          <div class="pills">
+            <span class="pill-accent">AI in Product Design</span>
+            <span class="pill-accent">Agent Design</span>
+            <span class="pill-accent">MCP</span>
+            <span class="pill-accent">Vibe coding</span>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="section-label">Portfolio</div>
+        <div class="portfolio-note">
+          Case studies + live prototypes at <a href="https://piyushmodi.com">piyushmodi.com</a><br/>
+          Internal work on walkthrough request.
+        </div>
+      </section>
+
+    </aside>
+
+    <!-- Main experience -->
+    <main class="main">
+      <section>
+        <div class="section-label">Experience</div>
+
+        <!-- Apple -->
+        <div class="role">
+          <div class="role-header">
+            <span class="company">Apple</span>
+            <span class="period">Jun 2025 — Present</span>
+          </div>
+          <div class="role-title">Product Designer, Contract</div>
+          <ul class="bullets">
+            <li>Designed internal tools across <span class="h">workplace, real estate, commute, and reservation workflows</span>.</li>
+            <li>Built and scaled a design system to improve consistency across products.</li>
+            <li>Introduced AI-assisted workflows for design, accessibility checks, and developer handoff.</li>
+            <li>Led design sprints from concept to implementation with cross-functional teams.</li>
+          </ul>
+        </div>
+
+        <!-- Capmov -->
+        <div class="role">
+          <div class="role-header">
+            <span class="company">Capmov</span>
+            <span class="period">Feb 2024 — Present</span>
+          </div>
+          <div class="role-title">Co-Founder / Design Consultant · Side Practice</div>
+          <ul class="bullets">
+            <li>Led design and brand strategy for multiple clients, working directly with founders.</li>
+            <li>Increased online reservations by <span class="h">20%</span> for a premium restaurant through UX and brand improvements.</li>
+            <li>Supported growth of a food delivery platform to <span class="h">150+ partner restaurants</span> through UX and rebranding.</li>
+          </ul>
+        </div>
+
+        <!-- ChipReady -->
+        <div class="role">
+          <div class="role-header">
+            <span class="company">ChipReady</span>
+            <span class="period">Nov 2024 — Jun 2025</span>
+          </div>
+          <div class="role-title">Product Design Advisor</div>
+          <ul class="bullets">
+            <li>Led design for an <span class="h">AI-powered workforce platform</span> from early stages.</li>
+            <li>Built and scaled UX and content for <span class="h">40+ courses</span> for semiconductor professionals.</li>
+            <li>Improved website engagement, contributing to a <span class="h">30% increase</span> in traffic.</li>
+          </ul>
+        </div>
+
+        <!-- MathWorks -->
+        <div class="role">
+          <div class="role-header">
+            <span class="company">MathWorks</span>
+            <span class="period">Jun 2022 — Feb 2024</span>
+          </div>
+          <div class="role-title">Product Designer</div>
+          <ul class="bullets">
+            <li>Redesigned MATLAB's plot viewer — identified the usability failure, ran the research, shipped to Beta.</li>
+            <li>Maintained and improved <span class="h">50+ components</span> in the design system; created micro-interactions for 20+ of them.</li>
+            <li>Standardised 60+ badges and visual elements across MATLAB; designed <span class="h">170+ icons</span> for Simulink dark mode.</li>
+          </ul>
+        </div>
+
+        <!-- Copal.ai -->
+        <div class="role">
+          <div class="role-header">
+            <span class="company">Copal.ai</span>
+            <span class="period">Aug 2021 — Dec 2021</span>
+          </div>
+          <div class="role-title">Product Designer</div>
+          <ul class="bullets">
+            <li>Designed AI-enabled products from concept to launch for education workflows.</li>
+            <li>Built core AI features for video learning — translation, quizzes, and content generation.</li>
+          </ul>
+        </div>
+
+        <!-- Tapestry / Publicis Sapient -->
+        <div class="role">
+          <div class="role-header">
+            <span class="company">Tapestry</span>
+            <span class="period">Dec 2020 — Aug 2021</span>
+          </div>
+          <div class="role-title">Product Researcher, Contract</div>
+          <ul class="bullets">
+            <li>Led UX research for e-commerce checkout and product discovery; translated findings into design improvements.</li>
+            <li>Designed and prototyped product detail pages for mobile and web.</li>
+          </ul>
+        </div>
+
+        <!-- Deloitte -->
+        <div class="role">
+          <div class="role-header">
+            <span class="company">Deloitte Consulting</span>
+            <span class="period">Aug 2017 — Dec 2020</span>
+          </div>
+          <div class="role-title">Product Designer</div>
+          <ul class="bullets">
+            <li>Designed <span class="h">Salesforce-based SaaS products</span> for US government and public sector clients, reducing development time by <span class="h">40%</span>.</li>
+            <li>Built a recruitment tool that reduced HR paperwork by <span class="h">70%</span> and improved campus hiring workflows.</li>
+            <li>Launched an internal referral platform — increased employee referrals by <span class="h">22%</span> in 6 months.</li>
+            <li>Received the <span class="h">Deloitte Applause Award</span> — awarded by a senior manager, skipping three levels, for design work that helped win government contracts.</li>
+          </ul>
+        </div>
+
+      </section>
+    </main>
+  </div>
+
+</div>
+
+<button class="print-btn" onclick="window.print()">
+  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/>
+  </svg>
+  Save as PDF
+</button>
+
+</body>
+</html>

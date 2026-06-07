@@ -26,11 +26,11 @@ order: 2
 <Chapter
   number="01"
   title="The World"
-  intro="Before the problem, the context. Without it, none of the decisions make sense."
+  intro="Here's the world MATLAB engineers work in. The problem only makes sense once you've seen it."
 />
 
 <Prose>
-MATLAB is used by engineers and scientists at Tesla, NASA, aerospace companies, and research labs worldwide. It's where they analyse simulation data, compare test results, and make sense of complex outputs. That work produces plots (visual representations of data), and engineers generate dozens of them in a single session.
+MATLAB is used by engineers and scientists at Tesla, NASA, aerospace companies, and research labs worldwide. It's where they analyse simulation data, compare test results, and make sense of complex outputs. That work produces plots, sometimes dozens per session.
 
 The standard experience: run the code, watch new plot windows appear on screen, each one floating separately, stacking on top of each other. To compare two plots, you drag and resize windows by hand. Run the code again and every arrangement is gone. Start over.
 
@@ -41,6 +41,7 @@ It's not a dramatic problem. Nobody files a ticket saying "this is broken." It's
   video="/work/matlab/02-problem-statement.mp4"
   caption="The default MATLAB experience: run code, get floating windows, arrange them manually. Run again, lose everything."
   rationale="The friction was invisible because engineers had adapted to it. The job was to surface what they'd stopped questioning."
+  aspectRatio="auto"
 />
 
 <Chapter
@@ -50,57 +51,74 @@ It's not a dramatic problem. Nobody files a ticket saying "this is broken." It's
 />
 
 <Prose>
-The engineering team had already built a fix: Tab and Tile View. All plots in one window as tabs, one click to arrange them all into a grid. No floating windows, no manual rearranging.
-
-Before Beta, a researcher gave 7 engineers one task: find the feature that arranges all your plots into a grid view. Five minutes. Only 1 found it. The rest gave up or asked for hints.
-
-The feature was buried in a 3-dot menu under the label "Tile All." That phrase meant nothing to someone looking for a grid arrangement. One label. Two completely different mental models.
+The engineering team had already solved it: Tab and Tile View. All your plots in one window as tabs. One click to arrange them all into a grid automatically — no dragging, no manual sizing, no losing your layout when you re-run the code.
 </Prose>
+
+<Tension
+  beforeLabel="Before"
+  beforeTitle="Floating windows. Chaos every run."
+  beforeBody="Plots open in separate windows, stacking on top of each other. To compare two, you drag and resize by hand. Run the code again and your layout is gone."
+  afterLabel="Tab & Tile View"
+  afterTitle="One window. One click to arrange everything."
+  afterBody="All plots in a single window as tabs. Check Tiled View and the system picks the best grid layout automatically. Run the code again — it's still there."
+/>
 
 <Moment
   video="/work/matlab/03-tab-tile-before.mp4"
-  alt="The original MATLAB tab view with the confusing Tile All menu"
-  caption="The original experience: plots are combined into tabs, but finding the grid arrangement requires navigating to 'Tile All', then manually clicking a grid of squares to choose a layout. Nobody made that connection."
+  alt="Tab and Tile View in MATLAB: all plots in one window, one click to tile into a grid"
+  caption="Tab and Tile View in action: all plots in one window, arranged into a grid with a few clicks. Engineers who saw it for the first time didn't want to go back."
+  aspectRatio="auto"
 />
+
+<Pull attribution="Engineer, MathWorks usability study">
+  "No more manual rearrangement. Finally."
+</Pull>
+
+<Prose>
+Every engineer in the study reacted the same way the moment it was shown to them. The feature worked.
+
+But before Beta, the researcher had given those same engineers one task: find the feature that arranges plots into a grid. Five minutes. **Only 1 of 7 found it without help.**
+</Prose>
 
 <TickerGroup
   m1value="7" m1label="engineers given the task of finding the feature"
   m2value="1" m2label="found it without guidance, in five minutes"
 />
 
-<Pull>
-  When the researcher finally showed them the feature, every single engineer said the same thing: this would save me so much time.
-</Pull>
+<Moment
+  image="/work/matlab/11-tile-all-submenu.png"
+  alt="The Tile All submenu showing radio buttons and a 5x5 grid picker"
+  caption="The 'Tile All' submenu: three layout modes and a custom grid picker, for something engineers just wanted to happen automatically."
+  aspectRatio="auto"
+  size="md"
+/>
 
 <Prose>
-The feature worked. Users loved it the moment they saw it. But the problem was never just the label. Even engineers who found "Tile All" hit a second wall: a submenu with radio buttons and a manual grid picker - Single, Left/Right, Top/Bottom, then a 5x5 grid of squares to choose a layout. Like inserting a table in Word. Nobody connected that to "arrange my plots." The label sent them to the wrong place, and the interaction confirmed they were lost. Both problems needed fixing.
+The feature was buried in a 3-dot menu under the label "Tile All." That phrase meant nothing to someone looking for a grid arrangement. And even engineers who found it hit a second wall: a submenu with radio buttons and a 5×5 grid picker — Single, Left/Right, Top/Bottom, then choose your exact layout. Like inserting a table in Word. Nobody connected that interaction to "arrange my plots." The label sent them to the wrong place, and the submenu confirmed they were lost.
 </Prose>
 
 <Chapter
   number="03"
   title="The Work"
-  intro="Every obvious solution hit a wall. The real design started when the obvious options ran out."
+  intro="MathWorks brought me in to evaluate the full plot-viewing experience before Beta — not to fix one specific problem, but to find every place it was harder than it needed to be."
 />
 
 <Prose>
-Before exploring solutions, I studied how other tools handle tabbed layouts and view switching: VS Code, Figma, Chrome DevTools, Power BI, Tableau. The goal was to understand what patterns engineers already knew before proposing anything new.
+Before proposing anything, I tested the current experience end-to-end. Then I looked at how engineers work in the tools they already use daily — VS Code, Figma, Chrome DevTools, Power BI, Tableau. The goal: any improvement should fit what they already know, not ask them to learn something new.
 </Prose>
 
 <Moment
-  video="/work/matlab/04-benchmarking.mp4"
-  playbackRate={0.4}
+  image="/work/matlab/04-benchmarking-logos.png"
+  alt="VS Code, Figma, Chrome DevTools, Power BI, Tableau logos"
   aspectRatio="auto"
-  cropTop={33}
-  cropBottom={33}
-  fadeEdges
-  caption="Competitive benchmarking: how tools engineers already use handle tabbed layouts and view switching. Finding the patterns that already live in their mental model."
-  rationale="If users already know how to do something in another tool, meeting that expectation reduces the learning curve to near zero."
+  size="full"
+  caption=""
 />
 
 <Prose>
-The study surfaced more than just discoverability. Engineers were also losing their tab layout every time they closed the window - the only way to reopen it was to re-run the code. There were performance questions around how the tab view handled large numbers of plots. And there were smaller workflow improvements worth exploring, all specific to the new tab and tile layout. More problems than one sprint could hold.
+The benchmarking surfaced more than UI patterns. MATLAB's tab view was missing things that felt standard everywhere else: no way to recover a closed tab, no pinning, no grouping. The only way to get a plot back was to re-run the code.
 
-So before any design work started, I ran an Impact-Effort Matrix with the researcher, PM, and engineering lead. Every candidate improvement on the board, every voice in the room. The scope decision needed to be shared, not handed down. "Quick switching between views" landed in High Impact, Low Effort. Unanimous. Everything else moved to the backlog.
+None of these were the original brief — but they were real gaps. I ran an Impact-Effort Matrix with the researcher, PM, and engineering lead to put every candidate improvement on the board and decide together what we were actually solving. "Quick switching between views" landed High Impact, Low Effort. Unanimous. Everything else moved to the backlog.
 </Prose>
 
 <Moment
@@ -108,18 +126,17 @@ So before any design work started, I ran an Impact-Effort Matrix with the resear
   aspectRatio="auto"
   size="md"
   caption="Impact-Effort Matrix: every candidate improvement mapped as a sticky note, four named cursors representing the team. One session. One clear winner."
-  rationale="Scope decisions made in isolation get relitigated mid-sprint. Making the call together in a shared framework meant everyone left the room aligned."
 />
 
 <Prose>
-I mapped every way to make the feature more visible and accessible. Each direction had a clear rationale. Each one failed for a concrete, documented reason.
+Since we were all aligned on making the view switch simpler to find and use, I tried a few concrete ideas, worked through each one, and learned from what didn't work.
 </Prose>
 
 <StackedCards
   eyebrow="What was tried, and why it didn't work"
-  c1num="01" c1title="Put it on the taskbar" c1body="Highest visibility, one click. Business said no: the taskbar is shared across all of MATLAB. A plot-specific view toggle doesn't belong in a global space used by every part of the product."
-  c2num="02" c2title="Add a toggle button inside the menu" c2body="Visually communicates two states better than any other component. The codebase said no: MATLAB has been running since the 1980s. A toggle component simply didn't exist in the system. You can't build what the platform can't support."
-  c3num="03" c3title="A view switcher in the top ribbon" c3body="Most visible real estate in the product. Cross-team dependencies said no: any change to the top ribbon requires approval from every team across MATLAB. The scope was impossible for a single-feature fix."
+  c1num="01" c1title="Add a parent header above the tabs" c1body="A structural split: a parent header layer above the tabs, with global actions in a 3-dot menu and local actions on each tab's context menu — plus two buttons to quickly switch between views. MATLAB had never done something like this before. That kind of structural change needed every team to sign off. Coordinating that across the product for a single feature improvement was out of scope." c1image="/work/matlab/12-rejected-taskbar.png"
+  c2num="02" c2title="Add a toggle button inside the menu" c2body="Visually communicates two states better than any other component. But a toggle component in the menu didn't exist in the system. The platform couldn't support it." c2image="/work/matlab/13-rejected-toggle.png"
+  c3num="03" c3title="A View tab in the ribbon with two toggle buttons" c3body="Most visible real estate in the product. But MATLAB's View tab, everywhere else in the product, only acts on the currently open window. Switching between Tab View and Tiled View affects all open plots at once — a completely different behaviour from every other View tab in the app. That inconsistency was enough to kill it." c3image="/work/matlab/14-rejected-ribbon.png"
 />
 
 <Pull accent>
@@ -127,9 +144,15 @@ I mapped every way to make the feature more visible and accessible. Each directi
 </Pull>
 
 <Prose>
-That question reframed everything. I stopped asking what the ideal solution looked like and started asking what was achievable within the constraints: the 1980s codebase, the design system's existing components, and the patterns MATLAB users already knew.
+I stopped asking what the ideal solution looked like and started asking what was achievable: the 1980s codebase, existing design system components, and patterns MATLAB users already knew.
+</Prose>
 
-The answer was a checkbox. Not glamorous, but a checkbox was already used throughout MATLAB's menus. Engineers knew how to read it. It fit the design system. The codebase could support it. Check it and the system picks the best grid layout automatically. No more choosing between 2x3 and 3x3. No more manual configuration.
+<Pull>
+  A checkbox.
+</Pull>
+
+<Prose>
+Not glamorous, but a checkbox was already used throughout MATLAB's menus. Engineers knew how to read it. It fit the design system. The codebase could support it. Check it and the system picks the best grid layout automatically. No configuration. No choices.
 </Prose>
 
 <Moment
@@ -137,6 +160,7 @@ The answer was a checkbox. Not glamorous, but a checkbox was already used throug
   poster="/work/matlab/07-feature-tiled-view.png"
   alt="The redesigned context menu with Tiled View checkbox"
   caption="The redesign in action: one checkbox switches from tabs to a tiled grid. System picks the best layout automatically. The menu is now grouped: Views at top, all-figure actions together, per-figure actions together."
+  aspectRatio="auto"
 />
 
 <Moment
@@ -147,12 +171,8 @@ The answer was a checkbox. Not glamorous, but a checkbox was already used throug
 />
 
 <Decision label="The decision that defined the redesign">
-  <span>System decides the optimal layout. The user just says yes or no. No more choosing grid configurations, no more manual arrangement.</span>
+  <span>Check 'Tiled View' and all plots arrange themselves in the best layout automatically. No configuration required.</span>
 </Decision>
-
-<Callout variant="constraint">
-  A checkbox was the right answer because it was the one component that worked within a codebase from the 1980s, matched the design system's rules for context menus, and fit the mental model MATLAB users already had. Designing within constraints isn't a compromise. It's reading the room.
-</Callout>
 
 <MarqueeStrip text="Interaction Design · Usability Research · Constraint-Based Design · Context Menu · Engineering Tools · MATLAB · " />
 
@@ -162,9 +182,9 @@ The answer was a checkbox. Not glamorous, but a checkbox was already used throug
 />
 
 <Prose>
-The redesign shipped. One checkbox. The system picks the layout. Engineers who spent 35 to 45 seconds manually arranging plots were doing it in 5 to 8. The feature that 6 out of 7 engineers couldn't find became the first thing they reached for.
+The redesign shipped with the next Beta build. Feature discovery went from 1 in 7 to all 7. Plot arrangement dropped from 35–45 seconds to 5–8.
 
-When I presented the final design, the developers who had maintained that part of MATLAB for years were the ones who reacted first. Not the PM, not the researcher. The people closest to the code. They knew what the users had been dealing with - and they knew this fixed it. That reaction meant more than any test result.
+When I walked the engineering team through the final design, the developers who'd maintained that codebase for years reacted first — before the PM, before the researcher. They'd watched users work around this problem for a long time. They knew the fix was right. That meant more than any test metric.
 </Prose>
 
 <Moment
@@ -173,6 +193,7 @@ When I presented the final design, the developers who had maintained that part o
   alt="The final Tiled View feature in action"
   caption="Before: floating windows, manual arrangement, a buried menu nobody understood. After: one checkbox, one click, plots arranged instantly."
   rationale="The engineer from Chapter 01 - the one who ran code and lost everything - now runs the same code and gets a tiled layout waiting for them. That's the fix."
+  aspectRatio="auto"
 />
 
 <TickerGroup

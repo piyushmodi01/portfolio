@@ -16,74 +16,72 @@ order: 3
   title="A form platform that let government teams deploy without engineering."
   role="UI/UX Designer · Sole Designer, Team of 6"
   year="2019 — Ongoing"
-  scope={["Product Design", "Systems Design", "Government UX"]}
-  color="linear-gradient(135deg, #001a0e 0%, #002d18 45%, #001f10 100%)"
-  image="https://picsum.photos/seed/dcf-hero/1600/1000"
-  tldr="US government programs (child welfare, benefits, case management) run on complex data collection. Deloitte was rebuilding those forms from scratch for every client. I designed the platform that replaced that. We built two ways to fill a form, because a case worker interviewing a child needs something different from a citizen applying for benefits online."
+  color="#f3f3f3"
+  image="/work/deloitte/hero.png"
+  imageFit="fade"
+  imageFade={false}
+  tldr="US government programs — child welfare, benefits, case management — run on complex data collection. Deloitte was rebuilding those forms from scratch for every client. I built the platform that let Deloitte configure and deploy those forms without starting from scratch each time. The platform had two sides: a drag-and-drop form builder for Deloitte teams to configure and deploy, and a rendered form experience for the case workers and citizens filling them out."
 />
 
 <Chapter
   number="01"
-  title="The Problem"
-  intro="Government data collection sounds like an IT problem. It isn't."
+  title="The World"
+  intro="Government forms aren't a UI problem. They're what stands between a person in need and the system that's supposed to help them."
 />
 
 <Prose>
-US government programs depend on forms. Benefits applications, child welfare assessments, case management intake, eligibility screening: the form is often the first interaction between a person in need and the system that's supposed to help them. The form has to be accurate, because a wrong answer has real consequences. It has to handle complexity, because government policy is never simple. And it has to work for the person filling it out, whether that's a citizen on a slow connection or a case worker interviewing a family.
+Benefits applications, child welfare assessments, case management intake. These forms are often the first interaction between a vulnerable person and a government program. A wrong answer has real consequences. The forms are long, conditional, and complex by design.
 
-Deloitte was building these forms custom for every client engagement, each one starting from a blank Salesforce project, each one needing its own development, testing, and maintenance. Nothing carried over. Everything took longer than it should.
+Deloitte was building these forms custom for every client. Every engagement started with a blank Salesforce project. Every form needed its own development, testing, and maintenance. Nothing carried over. Everything took longer than it should.
 
-The opportunity: build one platform that any Deloitte team could use to configure and deploy forms for any government program, without writing a single line of code each time.
+The opportunity: build one platform that any Deloitte team could configure and deploy for any government program, without writing code each time.
 </Prose>
-
-<TickerGroup
-  m1value="5" m1suffix="+" m1label="government programs deployed on the platform"
-  m2value="3" m2suffix="+" m2label="RFPs where Deloitte used a working demo instead of a proposal to win work"
-  m3value="550" m3suffix="+" m3label="developer hours saved on the first state deployment, by team estimate"
-/>
 
 <Chapter
   number="02"
-  title="What We Built"
-  intro="The platform needed two entry modes, because the same form serves two very different people."
+  title="The First Version"
+  intro="The Conversational UI was a good idea. It just didn't fit every room."
 />
 
 <Prose>
-The first version of DCF centred on a Conversational UI: one question at a time, linear, clean. For the right use case, it was genuinely good: data quality was high, users stayed focused, and shorter forms felt effortless. Several clients adopted it and it worked well for them.
+The first version of the platform — called DCF — was built around a Conversational UI. One question at a time, linear, focused. For the right use case, it worked well. Data quality was high, shorter forms felt effortless, and several clients adopted it.
 
-But it was built around an assumption: that the person filling out the form could answer each question before seeing the next one. For shorter citizen-facing forms, that assumption held. For complex, multi-page government assessments, it didn't.
+But it was built on an assumption: that the person filling out the form could answer each question before seeing the next one. For citizen-facing forms — someone applying for benefits from home — that held. For complex, multi-page government assessments, it didn't.
+</Prose>
+
+<Moment
+  video="/work/deloitte/conversational-ui.mp4"
+  alt="Conversational UI in action — one question at a time"
+  caption="Conversational UI in action: one question at a time, clean and focused. For the right use case, it genuinely worked."
+  aspectRatio="auto"
+/>
+
+<Chapter
+  number="03"
+  title="The Moment It Broke"
+  intro="A client meeting ended in five minutes. That was the turning point."
+/>
+
+<Pull>
+  A US State told us the product wouldn't work. Their case workers sit across from children. They cannot fill out a form one question at a time.
+</Pull>
+
+<Prose>
+We were demoing to a US State client. We thought we'd sold it.
+
+Their feedback was immediate: case workers operate in the field, meeting families in difficult situations. They need to see the whole form so they can plan the conversation — what questions are coming, what sections are next, how much is left. Asking one question, waiting, then asking the next would break the conversation. The meeting ended.
+
+Case workers aren't filling out a form. They're having a conversation — in person or on the phone — while a form happens to be open.
 </Prose>
 
 <Tension
   beforeLabel="Conversational UI"
-  beforeTitle="One question at a time. High data quality. Right for shorter, simpler forms."
-  beforeBody="Works when the user can answer sequentially without needing context from later questions. Great for online citizen forms. Fails for complex assessments where the person filling it out needs the full picture."
+  beforeTitle="One question at a time. Right for simpler forms."
+  beforeBody="Works when the person can answer sequentially without needing to see what's ahead. Great for citizens applying online. Breaks for case workers who need to plan the whole conversation before it starts."
   afterLabel="Traditional UI"
-  afterTitle="Full form visible. Progress tracked. Built for people who need to plan the conversation, not just answer it."
-  afterBody="Designed for case workers, intake specialists, and anyone who needs to navigate a complex form while also managing a human conversation on the other side of the table."
+  afterTitle="Full form visible. Built for people managing a conversation at the same time."
+  afterBody="Designed for case workers and intake specialists who need to plan ahead, track progress, and navigate non-linearly — all while talking to the person in front of them."
 />
-
-<Callout variant="insight">
-  Both modes shipped. Every form in the platform has a toggle: case workers and citizens can switch between Conversational and Traditional based on how they work. The use case decides, not the designer.
-</Callout>
-
-<Chapter
-  number="03"
-  title="Where It Broke"
-  intro="The moment a client meeting ends badly is the moment you learn something you couldn't have learned any other way."
-/>
-
-<Pull>
-  The State of Indiana told us the product wouldn't work in their state. Their case workers sit across from children. They cannot fill out a form one question at a time.
-</Pull>
-
-<Prose>
-We were demoing the Conversational UI to what we believed was the State of Indiana. The goal was to show them how quickly we could configure and deploy their intake forms. We thought we'd sold it.
-
-Their feedback was immediate: their case workers work in the field, meeting children and families in difficult situations. They need to see the whole form so they can plan the conversation. What questions are coming, what sections are next, how much is left. Asking one question, waiting, then asking the next would break the conversation. The meeting ended.
-
-That moment changed what we built. It wasn't a failure of the feature. It was a failure of understanding who was in the room. Case workers aren't filling out a form. They're conducting a conversation while a form happens to be open.
-</Prose>
 
 <Chapter
   number="04"
@@ -92,32 +90,38 @@ That moment changed what we built. It wasn't a failure of the feature. It was a 
 />
 
 <Prose>
-The dev team had moved quickly after the Indiana meeting and built a version of the traditional UI on their own: multiple columns, no clear flow, no visual hierarchy. It was functional in the way that a spreadsheet is functional.
+The dev team had moved quickly after Indiana and built their own version: multiple columns, no clear hierarchy, no sense of flow. Functional in the way a spreadsheet is functional.
 
-I came in, rebuilt it from scratch around a single question: what does a case worker actually need when they look at the screen?
+I rebuilt it around one question: what does a case worker actually need when they glance at the screen?
 
-The answer, from watching day-in-the-life videos of case workers: as little as possible, as clearly as possible. Case workers are sitting across from people in difficult situations. Every second they look at the screen is a second they're not looking at the person. When they do look at the screen, they need to understand their position instantly. Where they are, what's next, how much is left. So they can plan without losing the thread of the conversation.
+The answer — from watching day-in-the-life videos of case workers — was as little as possible, as clearly as possible. Every second they spend looking at the screen is a second they're not looking at the person across the table. When they do look, they need to know where they are, what's next, and how much is left. Instantly.
 </Prose>
 
 <Moment
-  image="https://picsum.photos/seed/dcf-form/1600/1000"
-  alt="DCF rendered form, single column layout with left-panel section navigation"
-  caption="Single column so the eye moves straight down without scanning left to right. Left panel showing every section, question counts per section, and completion status, so case workers can plan their next questions without losing eye contact."
-  rationale="The layout isn't a visual preference. It's a decision about where a case worker's attention should be: on the screen, or on the person across the table."
+  video="/work/deloitte/traditional-ui.mp4"
+  alt="Traditional UI interaction — case worker navigating a multi-section form"
+  caption="Traditional UI in action: single column, persistent progress panel on the left. Case workers always know where they are and what's coming next."
+  aspectRatio="auto"
 />
 
 <StackedCards
-  eyebrow="Three decisions that shaped the platform"
-  c1num="01" c1title="Single column, top to bottom" c1body="Eliminates left-right scanning. Case workers glance at the screen and back: one column means they never lose their place. Every question flows straight down."
-  c2num="02" c2title="Progress panel, always visible" c2body="Every section listed on the left, with question counts and completion status. Case workers can plan the next five questions in their head before asking any of them. Conversation first, form second."
-  c3num="03" c3title="Conditional visibility, in real time" c3body="Answer 'No' to 'Do you have a US visa?' and 50 questions across five pages disappear instantly. The form adapts to the person being interviewed. Irrelevant sections never appear."
+  eyebrow="Two major decisions that shaped the form"
+  c1num="01" c1title="Single column, top to bottom" c1body="Eliminates left-right scanning. Case workers glance at the screen and back — one column means they never lose their place. Every question flows straight down."
+  c2num="02" c2title="Progress panel, always visible" c2body="Every section listed on the left, with question counts and completion status. Case workers can plan the next five questions before asking any of them. Conversation first, form second."
+/>
+
+<Decision label="The decision that defined the platform">
+  <span>Two modes, one platform. Conversational for citizens. Traditional for case workers. A toggle gives the choice to the person doing the work — not the designer, not the configuration.</span>
+</Decision>
+
+<Moment
+  video="/work/deloitte/mode-switching.mp4"
+  alt="Switching between Conversational and Traditional UI modes"
+  caption="The same form, two modes. Project teams decide which interface their users get — Conversational for citizens applying online, Traditional for case workers managing a live conversation."
+  aspectRatio="auto"
 />
 
 <MarqueeStrip text="Government UX · Salesforce · Conditional Logic · Case Workers · Systems Design · Child Welfare · Form Platform · " />
-
-<Decision label="Key decision">
-  <span>Two entry modes, one platform. The use case decides which is right. Not a default, not an assumption: a toggle that gives the choice to the person doing the work.</span>
-</Decision>
 
 <Chapter
   number="05"
@@ -125,25 +129,47 @@ The answer, from watching day-in-the-life videos of case workers: as little as p
 />
 
 <Prose>
-I never met a single user. The chain from me to the families filling out these forms ran five layers deep: India office, US office, state government, case worker, citizen. I designed for people I only knew through videos and secondhand notes. The platform is still running, still being expanded, still being rolled out to new clients. I found that out from colleagues after I'd already left.
+I never met a single user. The chain from me to the families filling out these forms ran five layers deep: India office, US office, state government, case worker, citizen. I designed for people I only knew through videos and secondhand notes.
+
+The platform is still running. Still being expanded. Still rolling out to new clients. I found that out from colleagues after I'd already left.
 </Prose>
 
+<Chapter
+  number="06"
+  title="What Came Next"
+  intro="The MVP shipped. Then the real work started."
+/>
+
+<Prose>
+Once the two-mode platform was stable, we built the features that made it production-ready for government scale.
+</Prose>
+
+<StackedCards
+  eyebrow="Features built after MVP"
+  c1num="01" c1title="Conditional Logic Builder" c1body="A visual rule builder that let non-technical Deloitte teams configure which questions appear based on previous answers — without writing a line of code. Answer 'No' and entire sections collapse in real time. The form adapts to the person, not the other way around."
+  c2num="02" c2title="Themes" c2body="State government clients needed forms that looked like their own product, not a Deloitte tool. A theming system let teams customise colours, typography, and branding per deployment — one platform, many faces."
+  c3num="03" c3title="Multi-Language Support" c3body="Government programs serve communities that don't always speak English. Multi-language support let form content be configured in any language, with the UI adapting automatically. No separate builds. One form, any language."
+  c1video="/work/deloitte/conditional-logic.mp4"
+  c2video="/work/deloitte/themes.mp4"
+  c3video="/work/deloitte/multi-language.mp4"
+/>
+
 <TickerGroup
-  m1value="5" m1suffix="+" m1label="government programs deployed, still being rolled out to new clients"
-  m2value="3" m2suffix="+" m2label="RFPs won using a working platform demo, not a proposal deck"
-  m3value="0" m3label="other designers on the project. Every visual decision was mine to make."
+  m1value="5" m1suffix="+" m1label="government programs deployed, still rolling out to new clients"
+  m2value="3" m2suffix="+" m2label="RFPs won using a working platform demo instead of a proposal deck"
+  m3value="0" m3label="other designers on the project — every visual decision was mine to make"
 />
 
 <Pull>
-  That project made me the designer I am. I was reading every night and building the next day. Learning by doing, at scale, for real people. I didn't know what I was doing and I did it anyway. The thing I built is still being used.
+  That project made me the designer I am. Reading every night, building the next day. For real people, at real scale. The thing I built is still being used.
 </Pull>
 
 <Callout label="Recognition">
-  Received Deloitte's Applause Award, announced in front of the team with a card on the desk and a cash bonus. Awarded by the Senior Manager, skipping three levels. For design work that helped the organisation win government contracts.
+  Received Deloitte's Applause Award — announced in front of the team, card on the desk, cash bonus. Awarded by the Senior Manager, skipping three levels. For design work that helped win government contracts.
 </Callout>
 
 <Walkthrough
-  note="Want to see the platform in detail?"
+  note="Want to see the project in detail?"
   email="piyushmodi01@gmail.com"
 />
 

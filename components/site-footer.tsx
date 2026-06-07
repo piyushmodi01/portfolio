@@ -22,9 +22,8 @@ const COLUMNS: { heading: string; links: { label: string; href: string; external
     heading: "Connect",
     links: [
       { label: "Email", href: "mailto:piyushmodi01@gmail.com" },
-      { label: "LinkedIn", href: "https://linkedin.com/in/piyushmodi", external: true },
-      { label: "GitHub", href: "https://github.com/piyushmodi01", external: true },
-      { label: "Resume", href: "/resume.pdf" },
+      { label: "LinkedIn", href: "https://www.linkedin.com/in/piyushmodi01/", external: true },
+      { label: "Resume", href: "/resume.html" },
     ],
   },
 ];

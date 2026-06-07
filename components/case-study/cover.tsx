@@ -7,7 +7,7 @@ type CoverProps = {
   title: string;
   role: string;
   year: string;
-  scope: string[];
+  scope?: string[];
   tldr: string;
   image?: string;
   color?: string;
@@ -16,6 +16,8 @@ type CoverProps = {
    * "fade"  — Apple-style: light background, centered text above, image fades into page below.
    */
   imageFit?: "cover" | "fade";
+  /** When imageFit="fade", hides the bottom gradient mask. Default true. */
+  imageFade?: boolean;
 };
 
 export function Cover({
@@ -28,7 +30,21 @@ export function Cover({
   image,
   color,
   imageFit = "cover",
+  imageFade = true,
 }: CoverProps) {
+  const scopeBlock = scope.length > 0 ? (
+    <div>
+      <p className="mono text-[0.7rem] uppercase tracking-[0.16em] text-muted-soft">Scope</p>
+      <p className="mt-1 flex flex-wrap gap-1">
+        {scope.map((s, i) => (
+          <span key={s} className="text-[0.95rem] text-ink-soft">
+            {s}{i < scope.length - 1 ? <span className="text-muted-soft"> · </span> : null}
+          </span>
+        ))}
+      </p>
+    </div>
+  ) : null;
+
   if (imageFit === "fade") {
     return (
       <header style={{ background: color ?? "#f3f3f3" }}>
@@ -64,8 +80,8 @@ export function Cover({
               aria-hidden
               className="w-full object-contain"
               style={{
-                maskImage: "linear-gradient(to bottom, black 55%, transparent 95%)",
-                WebkitMaskImage: "linear-gradient(to bottom, black 55%, transparent 95%)",
+                maskImage: imageFade ? "linear-gradient(to bottom, black 55%, transparent 95%)" : undefined,
+                WebkitMaskImage: imageFade ? "linear-gradient(to bottom, black 55%, transparent 95%)" : undefined,
               }}
             />
           </div>
@@ -81,16 +97,7 @@ export function Cover({
               <p className="mono text-[0.7rem] uppercase tracking-[0.16em] text-muted-soft">Role</p>
               <p className="mt-1 text-[0.95rem] text-ink-soft">{role}</p>
             </div>
-            <div>
-              <p className="mono text-[0.7rem] uppercase tracking-[0.16em] text-muted-soft">Scope</p>
-              <p className="mt-1 flex flex-wrap gap-1">
-                {scope.map((s, i) => (
-                  <span key={s} className="text-[0.95rem] text-ink-soft">
-                    {s}{i < scope.length - 1 ? <span className="text-muted-soft"> · </span> : null}
-                  </span>
-                ))}
-              </p>
-            </div>
+            {scopeBlock}
             <div>
               <p className="mono text-[0.7rem] uppercase tracking-[0.16em] text-muted-soft">Year</p>
               <p className="mt-1 text-[0.95rem] text-ink-soft">{year}</p>
@@ -177,17 +184,7 @@ export function Cover({
             <p className="mono text-[0.7rem] uppercase tracking-[0.16em] text-muted-soft">Role</p>
             <p className="mt-1 text-[0.95rem] text-ink-soft">{role}</p>
           </div>
-          <div>
-            <p className="mono text-[0.7rem] uppercase tracking-[0.16em] text-muted-soft">Scope</p>
-            <p className="mt-1 flex flex-wrap gap-1">
-              {scope.map((s, i) => (
-                <span key={s} className="text-[0.95rem] text-ink-soft">
-                  {s}
-                  {i < scope.length - 1 ? <span className="text-muted-soft"> · </span> : null}
-                </span>
-              ))}
-            </p>
-          </div>
+          {scopeBlock}
           <div>
             <p className="mono text-[0.7rem] uppercase tracking-[0.16em] text-muted-soft">Year</p>
             <p className="mt-1 text-[0.95rem] text-ink-soft">{year}</p>

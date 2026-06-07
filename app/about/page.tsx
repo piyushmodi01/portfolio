@@ -9,7 +9,14 @@ import { PrincipleCard } from "@/components/about/principle-card";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Designer, builder, system thinker. Based in Sacramento, CA — contracting at Apple.",
+    "Product designer with 9+ years of experience. Started in computer science, moved into UX — Deloitte, Tapestry, MathWorks, and now Apple. Based in Sacramento, CA.",
+  alternates: { canonical: "https://piyushmodi.com/about" },
+  openGraph: {
+    title: "About · Piyush Modi",
+    description:
+      "Product designer with 9+ years of experience. Started in computer science, moved into UX — Deloitte, Tapestry, MathWorks, and now Apple.",
+    url: "https://piyushmodi.com/about",
+  },
 };
 
 const PRINCIPLES = [
@@ -49,10 +56,10 @@ const EXPERIENCE = [
   },
   {
     company: "Capmov",
-    role: "Co-Founder",
+    role: "Co-Founder · Side Consultancy",
     period: "2024 — Present",
     description:
-      "Product design and system-level work across multiple client projects.",
+      "Product design and brand strategy across multiple client projects, run alongside full-time work.",
   },
   {
     company: "ChipReady",
