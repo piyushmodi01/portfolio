@@ -68,7 +68,8 @@ export function SiteHeader() {
           ))}
           <a
             href="/resume.html"
-            download
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-1.5 rounded-full border border-border-strong bg-bg-elevated px-3.5 py-1.5 text-[0.82rem] font-medium text-ink-soft transition-colors hover:border-ink hover:text-ink"
           >
             <Download size={12} strokeWidth={2.5} />

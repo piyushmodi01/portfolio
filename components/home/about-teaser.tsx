@@ -23,14 +23,10 @@ export function AboutTeaser() {
               <div className="mt-8 flex flex-col gap-5 max-w-[54ch] text-[1.02rem] leading-relaxed text-muted">
                 <p>
                   I started in Computer Science. Deloitte moved me into design because they saw
-                  something I hadn&apos;t named yet. Nine years and five
-                  organisations later, I design internal platforms at Apple used by
-                  thousands of employees across real estate and operations.
-                </p>
-                <p>
-                  The technical foundation still pays off every day. I can talk to
-                  engineers in their language, read a schema, and catch the
-                  complexity hiding inside a simple-looking request.
+                  something I hadn&apos;t named yet. Nine years later, I&apos;m designing internal
+                  platforms at Apple — and the technical foundation still pays off every day. I can
+                  read a schema, talk to engineers in their language, and spot the complexity hiding
+                  inside a simple-looking request.
                 </p>
               </div>
 

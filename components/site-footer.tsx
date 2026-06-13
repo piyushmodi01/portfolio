@@ -23,7 +23,7 @@ const COLUMNS: { heading: string; links: { label: string; href: string; external
     links: [
       { label: "Email", href: "mailto:piyushmodi01@gmail.com" },
       { label: "LinkedIn", href: "https://www.linkedin.com/in/piyushmodi01/", external: true },
-      { label: "Resume", href: "/resume.html" },
+      { label: "Resume", href: "/resume.html", external: true },
     ],
   },
 ];
@@ -35,7 +35,7 @@ export function SiteFooter() {
         <div className="grid grid-cols-1 gap-10 md:grid-cols-[1.4fr_repeat(3,_1fr)] md:gap-12">
           <div className="max-w-md">
             <p className="font-display text-[clamp(1.6rem,4vw,2.25rem)] leading-[1.05] tracking-tight text-ink">
-              Designing systems that turn complexity into clarity.
+              I design internal tools, platforms, and systems for people who have real work to do.
             </p>
             <p className="mt-4 text-[0.95rem] text-muted">
               Senior product designer · Sacramento, CA · open to senior &amp; staff roles.

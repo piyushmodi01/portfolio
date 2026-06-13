@@ -22,7 +22,7 @@ export const WORK_TILES: WorkTile[] = [
     client: "Apple",
     title: "Designing internal systems at scale.",
     summary:
-      "Senior product design across internal tools and design systems for engineering, real-estate, and operations teams.",
+      "Internal tools and design systems for engineering, real estate, and operations. Not consumer products. The kind of software people open every morning and depend on to do their jobs.",
     year: "2025 — Present",
     scope: ["Product Design", "Design Systems", "AI-enabled Workflows"],
     cover: "/work/apple/hero.png",

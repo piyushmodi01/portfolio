@@ -42,10 +42,10 @@ export function Hero() {
           </h1>
 
           <p className="mt-5 text-[0.97rem] leading-relaxed text-muted md:text-[1.02rem]">
-            Currently designing for{" "}
+            Currently designing at{" "}
             <span className="text-ink font-medium">Apple</span>. Previously{" "}
             <span className="text-ink font-medium">MathWorks</span> and{" "}
-            <span className="text-ink font-medium">Deloitte</span>. Open to what's next.
+            <span className="text-ink font-medium">Deloitte</span>. Open to senior and staff roles.
           </p>
 
           <div className="mt-8 flex flex-wrap items-center gap-3">
