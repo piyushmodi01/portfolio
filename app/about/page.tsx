@@ -3,6 +3,7 @@ import { Container } from "@/components/ui/container";
 import { Eyebrow } from "@/components/ui/eyebrow";
 import { Reveal } from "@/components/ui/reveal";
 import { ButtonLink } from "@/components/ui/button";
+import { AnimatedHeading } from "@/components/about/animated-heading";
 import { PrincipleCard } from "@/components/about/principle-card";
 
 export const metadata: Metadata = {
@@ -104,14 +105,7 @@ export default function AboutPage() {
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-20 lg:items-start">
           {/* Left: heading + bio */}
           <div>
-            <Reveal>
-              <h1
-                className="display mt-8 leading-[1.05] tracking-tight text-ink"
-                style={{ fontSize: "clamp(2.8rem, 7vw, 5.6rem)" }}
-              >
-                9 years designing the systems large organizations run on.
-              </h1>
-            </Reveal>
+            <AnimatedHeading />
             <Reveal delay={100}>
               <div className="mt-10 flex flex-col gap-5 max-w-[52ch] text-[1.05rem] leading-[1.7] text-muted">
                 <p>
@@ -126,6 +120,12 @@ export default function AboutPage() {
                   their design system. Apple came next. These days I design internal
                   platforms across real estate and operations, used by thousands of
                   people across the company every day.
+                </p>
+                <p>
+                  I live in Sacramento with my wife, who reviews and approves design
+                  plans for the city. Design critique runs in the household. We have
+                  two cats, Zuko and Poppy. Very affectionate — especially around
+                  dinner time.
                 </p>
               </div>
             </Reveal>
@@ -172,21 +172,6 @@ export default function AboutPage() {
             </Reveal>
           ))}
         </div>
-      </Container>
-
-      {/* Divider */}
-      <div className="border-t border-border" />
-
-      {/* Personal */}
-      <Container className="py-20 md:py-28">
-        <Reveal>
-          <p className="max-w-[52ch] text-[1.05rem] leading-[1.7] text-muted">
-            I live in Sacramento with my wife, who reviews and approves design
-            plans for the city. Design critique runs in the household. We have
-            two cats, Zuko and Poppy. Very affectionate — especially around
-            dinner time.
-          </p>
-        </Reveal>
       </Container>
 
       {/* Divider */}

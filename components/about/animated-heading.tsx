@@ -4,10 +4,10 @@ import { useState, useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
 const WORDS = [
-  { article: "an", word: "Alchemist" },
-  { article: "a",  word: "Builder" },
-  { article: "a",  word: "Cat Dad" },
   { article: "a",  word: "Designer" },
+  { article: "a",  word: "Cat Dad" },
+  { article: "a",  word: "Vibe-Builder" },
+  { article: "a",  word: "So-So Cook" },
 ];
 
 export function AnimatedHeading() {
