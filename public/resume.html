@@ -250,14 +250,31 @@
 
   /* ---------- Print ---------- */
   @media print {
-    body { background: white; }
+    body {
+      background: white;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
     .page {
       width: 100%;
       min-height: auto;
       margin: 0;
       padding: 11mm 13mm 10mm;
       box-shadow: none;
+      background: white;
     }
+    /* Force all text colors to hard values — CSS vars can fail in print engines */
+    .name, .company { color: #111111; }
+    .headline, .role-title, .sidebar-sub, .portfolio-note { color: #5c5c66; }
+    .section-label, .skill-group-label, .period, .contact-row, .contact-row a { color: #8a8a93; }
+    .bullets li { color: #1c1c1c; }
+    .bullets li::before { color: #8a8a93; }
+    .pill { color: #5c5c66; border-color: rgba(0,0,0,0.16); background: #fafaf7; }
+    .pill-accent { color: #2a4bff; background: rgba(42,75,255,0.07); border-color: rgba(42,75,255,0.18); }
+    .h { color: #111111; }
+    .portfolio-note a { color: #2a4bff; }
+    .header { border-bottom-color: #111111; }
+    .section-label { border-bottom-color: rgba(0,0,0,0.09); }
   }
 
   @page { size: A4; margin: 0; }
