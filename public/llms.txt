@@ -1,0 +1,41 @@
+# Piyush Modi — Senior Product Designer
+
+> Personal portfolio of Piyush Modi, a senior product designer with 9+ years of experience in enterprise UX, design systems, and internal tools. Currently at Apple.
+
+Site: https://piyushmodi.com
+
+## About
+
+Piyush Modi is a senior product designer based in Sacramento, CA. He designs internal tools, platforms, and design systems — the kind of software people open every morning and depend on to do their jobs.
+
+Career: Deloitte Consulting (2017–2020) → Tapestry via Publicis Sapient (2020–2021) → MathWorks (2022–2024) → Apple (2025–present). Also runs Capmov, a design consultancy side practice.
+
+Education: MS Human-Computer Interaction, San Jose State University. BCA Computer Applications, Symbiosis International University.
+
+Contact: piyushmodi01@gmail.com
+LinkedIn: https://www.linkedin.com/in/piyushmodi01/
+
+## Case Studies
+
+- [Improving MATLAB's Plot Viewing Experience](https://piyushmodi.com/work/matlab-plot-viewer): Only 1 of 7 engineers could find a key MATLAB feature. Redesigned within codebase constraints — task completion improved from 1/7 to 7/7, task time dropped from 35–45s to 5–8s.
+
+- [Designing Salesforce Forms for Government](https://piyushmodi.com/work/salesforce-forms): Configurable form platform for US government data collection at Deloitte. Two modes on one platform: conversational UI for citizens, traditional for case workers. Deployed across 5+ state programs.
+
+- [Apple Internal Products](https://piyushmodi.com/work/apple): Internal tools and design systems used by thousands of Apple employees daily. NDA — walkthrough available on request.
+
+## Blog
+
+- [Are You Solving the Right UX Problem?](https://piyushmodi.com/blog/how-to-validate-true-user-needs): Two quick techniques — 5 Whys and So What? — to find the real problem before designing.
+
+- [The Power of Storytelling in UX Presentations](https://piyushmodi.com/blog/power-of-storytelling): How designers can present ideas in ways that resonate with non-designer stakeholders. Originally published on UXMatters.
+
+## Side Projects
+
+- Accessibility Checker: Bookmarklet + Sketch plugin + browser extension that audits text, contrast, and structure. Adopted across design and PM teams.
+- AG-Grid Builder: React tool for generating code-accurate data table exports for design files.
+- Design Agent: Tool for PMs to self-serve design gap analysis from a BRD before it reaches a designer.
+- Symbol Override Manager: Sketch plugin for managing symbol overrides at scale.
+
+## Skills
+
+Product Design, Design Systems, Enterprise UX, Internal Tools, AI Product Design, Interaction Design, Usability Research, Accessibility, Prototyping, HTML/CSS/JS, React, Sketch, Figma, Design Engineering.

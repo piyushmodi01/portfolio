@@ -11,6 +11,12 @@ export const metadata: Metadata = {
   title: "Notes",
   description:
     "Writing on craft, systems, and the AI–design seam.",
+  alternates: { canonical: "https://piyushmodi.com/blog" },
+  openGraph: {
+    title: "Notes · Piyush Modi",
+    description: "Writing on craft, systems, and the AI–design seam.",
+    url: "https://piyushmodi.com/blog",
+  },
 };
 
 function formatDate(iso: string): string {

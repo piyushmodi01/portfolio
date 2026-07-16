@@ -9,6 +9,12 @@ export const metadata: Metadata = {
   title: "Work",
   description:
     "Selected case studies from Apple, MathWorks, Deloitte, and beyond.",
+  alternates: { canonical: "https://piyushmodi.com/work" },
+  openGraph: {
+    title: "Work · Piyush Modi",
+    description: "Selected case studies from Apple, MathWorks, Deloitte, and beyond.",
+    url: "https://piyushmodi.com/work",
+  },
 };
 
 export default function WorkIndexPage() {

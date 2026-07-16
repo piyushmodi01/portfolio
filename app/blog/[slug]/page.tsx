@@ -49,8 +49,23 @@ export default async function BlogPostPage(props: {
   const post = getBlogPost(slug);
   if (!post) notFound();
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: post.title,
+    description: post.summary,
+    author: { "@type": "Person", name: "Piyush Modi", url: "https://piyushmodi.com" },
+    publisher: { "@type": "Person", name: "Piyush Modi", url: "https://piyushmodi.com" },
+    url: `https://piyushmodi.com/blog/${slug}`,
+    ...(post.publishedAt ? { datePublished: post.publishedAt } : {}),
+  };
+
   return (
     <Container as="main" className="py-20 md:py-28">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <div className="mx-auto max-w-2xl">
         {/* Back link */}
         <Link

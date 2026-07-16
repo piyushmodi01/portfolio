@@ -56,7 +56,7 @@ export default function OGImage() {
               maxWidth: 640,
             }}
           >
-            Senior Product Designer · Internal Tools · Design Systems · AI-enabled UX
+            Senior Product Designer · Internal Tools · Design Systems · Enterprise UX
           </div>
         </div>
 
