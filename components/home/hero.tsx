@@ -27,7 +27,7 @@ export function Hero() {
       {/* Content */}
       <Container className="relative z-10 flex flex-1 flex-col justify-center py-16 md:py-20">
         <div className="max-w-[56rem]">
-          <p className="eyebrow">Senior Product Designer</p>
+          <p className="eyebrow">Product designer at Apple</p>
 
           <h1 className="display mt-5 text-[clamp(2.4rem,4.2vw,4rem)]">
             I design{" "}
@@ -42,8 +42,7 @@ export function Hero() {
           </h1>
 
           <p className="mt-5 text-[0.97rem] leading-relaxed text-muted md:text-[1.02rem]">
-            Currently designing at{" "}
-            <span className="text-ink font-medium">Apple</span>. Previously{" "}
+            Previously{" "}
             <span className="text-ink font-medium">MathWorks</span> and{" "}
             <span className="text-ink font-medium">Deloitte</span>. Open to senior and staff roles.
           </p>

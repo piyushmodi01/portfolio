@@ -34,19 +34,19 @@ const CARDS: PlaygroundCard[] = [
 export function PlaygroundTeaser() {
   return (
     <section
-      id="playground"
-      aria-label="Playground"
+      id="systems-tools"
+      aria-label="Systems and Tools"
       className="relative py-24 md:py-36"
     >
       <Container>
         <div className="mb-16 md:mb-24 flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <div>
             <Reveal>
-              <Eyebrow number="03">Playground</Eyebrow>
+              <Eyebrow number="03">Systems &amp; Tools</Eyebrow>
             </Reveal>
             <Reveal delay={60}>
               <h2 className="display mt-4 text-[clamp(2rem,5.5vw,3.6rem)] leading-[1.05] tracking-tight max-w-[20ch]">
-                Tools and tinkering on the side.
+                Tools and systems built on the side.
               </h2>
             </Reveal>
           </div>
@@ -69,7 +69,7 @@ export function PlaygroundTeaser() {
         <Reveal delay={160}>
           <div className="mt-12">
             <ButtonLink href="/playground" variant="secondary" size="md">
-              See the playground
+              See all systems &amp; tools
             </ButtonLink>
           </div>
         </Reveal>

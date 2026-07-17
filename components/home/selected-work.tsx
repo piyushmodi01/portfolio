@@ -22,7 +22,7 @@ export const WORK_TILES: WorkTile[] = [
     client: "Apple",
     title: "Designing internal systems at scale.",
     summary:
-      "Internal tools and design systems for engineering, real estate, and operations. Not consumer products. The kind of software people open every morning and depend on to do their jobs.",
+      "Designing an enterprise product, shared components, and internal design tooling.",
     year: "2025 — Present",
     scope: ["Product Design", "Design Systems", "AI-enabled Workflows"],
     cover: "/work/apple/hero.png",
@@ -34,8 +34,8 @@ export const WORK_TILES: WorkTile[] = [
     client: "MathWorks",
     title: "Improving MATLAB's Plot Viewing Experience.",
     summary:
-      "A better layout already existed inside MATLAB — but users couldn't find it. I diagnosed why, fixed the usability problems, and got it to Beta.",
-    year: "2023",
+      "Making a critical engineering workflow easier to discover and significantly faster to complete.",
+    year: "2022 — 2024",
     scope: ["Usability Research", "Interaction Design", "Product Design"],
     cover: "/work/matlab/00-hero-original.png",
     accentTint:
@@ -46,8 +46,8 @@ export const WORK_TILES: WorkTile[] = [
     client: "Deloitte",
     title: "A form platform government teams could deploy themselves.",
     summary:
-      "Built a reusable Salesforce form system that removed the engineering dependency from every new government engagement — and became a Deloitte sales asset.",
-    year: "2019 — Ongoing",
+      "Turning a one-off government form into a configurable platform used across programs.",
+    year: "2017 — 2020",
     scope: ["Product Design", "Systems Design", "Government UX"],
     cover: "/work/deloitte/hero.png",
     accentTint:

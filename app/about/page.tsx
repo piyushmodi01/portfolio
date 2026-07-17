@@ -63,13 +63,13 @@ const EXPERIENCE = [
   },
   {
     company: "ChipReady",
-    role: "Design Advisor",
+    role: "Product Design Advisor, Part-Time",
     period: "Nov 2024 — June 2025",
     description: "UX and design strategy for an AI-powered workforce platform.",
   },
   {
     company: "Copal.ai",
-    role: "Sr. Product Designer",
+    role: "Product Designer",
     period: "Feb 2024 — Nov 2024",
     description:
       "Led design for 3 AI-powered products across feature prioritization, launches, and a design system.",
@@ -84,7 +84,7 @@ const EXPERIENCE = [
   {
     company: "Tapestry",
     role: "Product Researcher, Contract",
-    period: "2020 — 2021",
+    period: "Dec 2020 — Aug 2021",
     description:
       "User testing and key feature design for an eCommerce platform.",
   },

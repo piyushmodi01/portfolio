@@ -14,7 +14,7 @@ const COLUMNS: { heading: string; links: { label: string; href: string; external
     heading: "Site",
     links: [
       { label: "About", href: "/about" },
-      { label: "Playground", href: "/playground" },
+      { label: "Systems & Tools", href: "/playground" },
       { label: "Notes", href: "/blog" },
     ],
   },

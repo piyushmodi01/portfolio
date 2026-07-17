@@ -4,9 +4,15 @@ import { Eyebrow } from "@/components/ui/eyebrow";
 import { Reveal } from "@/components/ui/reveal";
 
 export const metadata: Metadata = {
-  title: "Playground",
+  title: "Systems & Tools",
   description:
-    "Tools, plugins, and experiments at the design–engineering seam.",
+    "Tools, plugins, and side projects at the design–engineering seam.",
+  alternates: { canonical: "https://piyushmodi.com/playground" },
+  openGraph: {
+    title: "Systems & Tools · Piyush Modi",
+    description: "Tools, plugins, and side projects at the design–engineering seam.",
+    url: "https://piyushmodi.com/playground",
+  },
 };
 
 type Status = "Live" | "In-progress";
@@ -67,11 +73,11 @@ export default function PlaygroundPage() {
   return (
     <Container as="main" className="py-20 md:py-28">
       <Reveal>
-        <Eyebrow>Playground</Eyebrow>
+        <Eyebrow>Systems &amp; Tools</Eyebrow>
       </Reveal>
       <Reveal delay={60}>
         <h1 className="display mt-4 text-[clamp(2.4rem,6vw,4.4rem)] leading-[1.05] tracking-tight max-w-[24ch]">
-          Tools, plugins, and tinkering.
+          Tools, plugins, and systems.
         </h1>
       </Reveal>
       <Reveal delay={100}>
