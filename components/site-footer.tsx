@@ -38,7 +38,7 @@ export function SiteFooter() {
               I design internal tools, platforms, and systems for people who have real work to do.
             </p>
             <p className="mt-4 text-[0.95rem] text-muted">
-              Senior product designer · Sacramento, CA · open to senior &amp; staff roles.
+              Senior product designer · Sacramento, CA.
             </p>
           </div>
 

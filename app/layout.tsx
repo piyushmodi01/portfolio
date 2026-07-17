@@ -29,7 +29,7 @@ const fraunces = Fraunces({
 export const metadata: Metadata = {
   metadataBase: new URL("https://piyushmodi.com"),
   title: {
-    default: "Piyush Modi — Senior Product Designer",
+    default: "Piyush Modi — Product Designer at Apple",
     template: "%s · Piyush Modi",
   },
   description:
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     canonical: "https://piyushmodi.com",
   },
   openGraph: {
-    title: "Piyush Modi — Senior Product Designer",
+    title: "Piyush Modi — Product Designer at Apple",
     description:
       "Product designer with 9+ years of experience. Currently designing internal tools and design systems at Apple.",
     url: "https://piyushmodi.com",

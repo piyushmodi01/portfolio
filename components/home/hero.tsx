@@ -42,9 +42,9 @@ export function Hero() {
           </h1>
 
           <p className="mt-5 text-[0.97rem] leading-relaxed text-muted md:text-[1.02rem]">
-            Previously{" "}
+            Previously at{" "}
             <span className="text-ink font-medium">MathWorks</span> and{" "}
-            <span className="text-ink font-medium">Deloitte</span>. Open to senior and staff roles.
+            <span className="text-ink font-medium">Deloitte</span>.
           </p>
 
           <div className="mt-8 flex flex-wrap items-center gap-3">
