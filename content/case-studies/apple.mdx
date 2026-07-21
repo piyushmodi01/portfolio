@@ -7,7 +7,7 @@ scope:
   - "Enterprise UX"
   - "Design Systems"
   - "Internal Tools"
-summary: "Lead designer across internal enterprise products at Apple. Platform design, design systems, mobile apps - all NDA. Here's how I work."
+summary: "Product designer embedded in a team building internal platforms used daily by thousands of Apple employees — and the systems and tools that help that team build better."
 order: 1
 ---
 
@@ -19,51 +19,105 @@ order: 1
   color="#f3f3f3"
   image="/work/apple/hero.png"
   imageFit="fade"
-  tldr="I design internal products at Apple - tools used by thousands of employees every day. All of it is NDA. What I can share is how I work and what kinds of problems I solve."
+  tldr="Seven products running in parallel. A design system that every product in the org builds from. A sprint process that changed how design and engineering ship together. And a tool that extended accessibility from design's workflow into every team's."
 />
 
 <Chapter
   number="01"
-  title="The Work"
-  intro="These aren't consumer apps. They're tools people use to do their jobs - and they have to work every time."
+  title="The Environment"
+  intro="Most software competes for users' attention. This platform already has it — people open it to do real work."
 />
 
 <Prose>
-Internal tools are different. The people using them are not browsing - they're working. They open the tool, do the thing, close it. If the design is getting in their way, they notice. If it's working, they don't.
+An internal platform used daily by thousands of employees to manage real estate, track facilities, and handle operations across a global footprint. I'm embedded in the product team — working alongside a single engineering lead and several PMs running parallel projects at the same time.
 
-**That's the only metric that matters.**
+The people using these tools are colleagues doing real work. That shifts the frame. There's no marketing, no onboarding funnel, no star rating. You earn trust by being genuinely useful, consistently.
 </Prose>
-
-<StackedCards
-  eyebrow="What I work on"
-  c1num="01" c1title="Platform design" c1body="Designing features across large internal platforms. Different screens, different user types - all need to feel like they belong. The job is figuring out what information people actually need and putting it where they'll look."
-  c2num="02" c2title="Design systems" c2body="Building and maintaining the shared component library that every product in the portfolio is built on. When this works, teams ship faster and things look consistent. When it doesn't, everyone feels it."
-  c3num="03" c3title="Research-led design" c3body="Running usability studies, designing within technical constraints, and working inside legacy codebases. The best solution isn't always the ideal one - it's the one that can actually ship."
-/>
 
 <Chapter
   number="02"
-  title="The Process"
-  intro="I introduced a 5-day design sprint to rapidly scope, design, and ship parts of a product - one week at a time."
-/>
-
-<Prose>
-Every Monday we look at the product, decide what chunk of work can move this week, and set the goal for the sprint. The rest of the week has a clear rhythm: scope, wireframe, review, hi-fi, ship.
-
-**Tangible work designed and delivered in a week, not a month.**
-</Prose>
-
-<TickerGroup
-  m1value="8" m1suffix="+" m1label="internal products designed from scratch"
-  m2value="30" m2suffix="+" m2label="reusable components in the shared design system, built from 0 to 1"
-  m3value="5" m3suffix="+" m3label="vibe coded tools, plugins, and agents built to speed up design delivery and audit work"
+  title="The System I Build"
+  intro="Every product in this org builds on the Globe Design System. One designer's decisions in every surface."
 />
 
 <Pull accent>
-  People ask for features. I look for the frustration underneath.
+  When you own the token layer, a single design decision reflects through everything built on top of it.
 </Pull>
 
-<MarqueeStrip text="Enterprise UX · Design Systems · Internal Tools · Sketch · Usability Research · Component Specs · Mobile Design · Prototyping · " />
+<Prose>
+Globe Design System is the shared foundation for this org. I design and maintain its token layer: the type ramp, the spacing scale, the full semantic color model across light and dark mode. Every product, every screen, and every component inherits these decisions.
+
+218 typography tokens. 84 semantic color tokens. 7 breakpoints. These aren't numbers to cite. They're the surface area of a single contribution. A token decision made in Globe affects everything downstream, all at once. Getting it right the first time is the job.
+
+It means specifying why a value is what it is, documenting what changes and what shouldn't, and holding that standard across every team that builds from it. Every exception outside the system is a decision that will eventually fracture consistency.
+</Prose>
+
+<TickerGroup
+  m1value="218" m1label="typography tokens in the Globe design system"
+  m2value="84" m2label="semantic color tokens across light and dark mode"
+  m3value="7" m3label="breakpoints — from iPhone to large desktop"
+/>
+
+<Chapter
+  number="03"
+  title="The Process I Introduced"
+  intro="Design and engineering were in separate lanes. Sprint structure changed that."
+/>
+
+<Prose>
+Before the sprint format was introduced, design and engineering operated with a gap between them. Specs arrived, builds happened, mismatches were caught late. I introduced a 5-day sprint structure that closed that gap by keeping both disciplines in the same room from the start.
+</Prose>
+
+<StackedCards
+  eyebrow="How the sprint works"
+  c1num="01" c1title="Diverge fast, converge deliberately" c1body="Days 1 and 2 are about exploring options without committing. Day 3 picks one direction and documents why. Engineering is in the room. Gaps get caught before they become problems."
+  c2num="02" c2title="Wire first, hi-fi only when it earns it" c2body="Day 4: wireframe or prototype. Hi-fi only if the direction needs it. On the Commute redesign, 5 sprints shipped from wireframes. No hi-fi needed because the process gave engineering enough context."
+  c3num="03" c3title="Engineering in the room on day 5" c3body="Day 5 review is not a handoff. It's a joint check on whether the direction is buildable and correct. By the time specs are written, there are no surprises on either side."
+/>
+
+<Pull>
+  The fastest way to close the gap between design and engineering is to not have one.
+</Pull>
+
+<Chapter
+  number="04"
+  title="A Tool Built for Design, Adopted by Everyone"
+  intro="Accessibility has always been design's responsibility. The goal was to make it everyone's habit."
+/>
+
+<Prose>
+The Accessibility Checker started as a personal tool — a way to run contrast checks and accessibility audits against internal standards rather than generic WCAG benchmarks alone. I built it as a browser extension, a Sketch plugin, and a bookmarklet so it could run inside whatever workflow someone was already in.
+
+What happened next wasn't planned: PMs started using it before design reviews. Engineers started running it before code review. The tool was available at the right moment in the right workflows, so the behavior changed.
+</Prose>
+
+<Pull accent>
+  Accessibility is design's job. The tool just made it easier for everyone else to participate.
+</Pull>
+
+<Prose>
+Version 1.1.0. Adopted by design, PM, and engineering teams across the org. The checker made a responsibility that lived primarily in design into a habit shared across the whole team.
+</Prose>
+
+<Chapter
+  number="05"
+  title="What Shipped"
+  intro="Seven products running in parallel. All NDA. All shipped or handed to engineering."
+/>
+
+<Prose>
+Seven products in parallel. An AI assistant, a document management system, role-based access controls, inline page editing, a report builder, a conference center booking overhaul, and a commute app redesign.
+
+None of it can be shown here. What it added up to: a platform that's measurably easier to use, a design system that scales, and a team that ships differently than it did before.
+</Prose>
+
+<TickerGroup
+  m1value="7" m1label="products designed in parallel"
+  m2value="5" m2label="products shipped from wireframes because a design system was already in place"
+  m3value="3" m3label="teams outside design adopted the Accessibility Checker"
+/>
+
+<MarqueeStrip text="Enterprise UX · Design Systems · Internal Tools · Sprint Process · Accessibility · Token Architecture · AI Product Design · Mobile Design · " />
 
 <Walkthrough
   note="The work is under NDA. The thinking isn't."
