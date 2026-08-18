@@ -27,8 +27,7 @@ export default function WorkIndexPage() {
         Case studies and selected work.
       </h1>
       <p className="mt-6 max-w-[40rem] text-[1.05rem] leading-relaxed text-muted">
-        A few projects that say the most about how I work. Walkthroughs of
-        internal work available on request.
+        A few projects that say the most about how I work.
       </p>
 
       <ul className="mt-16 flex flex-col gap-px overflow-hidden rounded-2xl border border-border bg-border">

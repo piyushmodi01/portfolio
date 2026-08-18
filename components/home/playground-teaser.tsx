@@ -18,7 +18,7 @@ const CARDS: PlaygroundCard[] = [
     status: "Live",
   },
   {
-    title: "Atlas Grid Builder",
+    title: "AG-Grid Builder",
     description:
       "React tool that lets designers compose AG Grid tables and export them to Sketch.",
     status: "Live",

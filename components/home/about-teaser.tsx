@@ -24,7 +24,7 @@ export function AboutTeaser() {
                 <p>
                   I started in Computer Science. Deloitte moved me into design because they saw
                   something I hadn&apos;t named yet. Nine years later, I&apos;m designing internal
-                  platforms at Apple — and the technical foundation still pays off every day. I can
+                  platforms for Apple — and the technical foundation still pays off every day. I can
                   read a schema, talk to engineers in their language, and spot the complexity hiding
                   inside a simple-looking request.
                 </p>

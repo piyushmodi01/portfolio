@@ -93,8 +93,8 @@ Custom components auto-injected via `caseStudyMdxComponents` map:
 `<Cover>`, `<Snapshot>`, `<Moment>`, `<Decision>`, `<Outcome>`, `<Walkthrough>`, `<NextCase>`, `<Prose>`
 
 ### Apple case study (content/case-studies/apple.mdx)
-Strict NDA framing — no product names, no internal screens, no metrics.
-`<Walkthrough />` CTA invites recruiters to request a 1:1 screen-share walkthrough.
+Strict NDA framing — no product names, no internal screens, no metrics, no named internal systems.
+No live walkthrough offer on this case study (Apple's contract terms prohibit offering to disclose NDA'd work, even on request).
 
 ---
 

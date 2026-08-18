@@ -30,11 +30,11 @@ const fraunces = Fraunces({
 export const metadata: Metadata = {
   metadataBase: new URL("https://piyushmodi.com"),
   title: {
-    default: "Piyush Modi — Product Designer at Apple",
+    default: "Piyush Modi — Senior Product Designer",
     template: "%s · Piyush Modi",
   },
   description:
-    "Product designer with 9+ years of experience. Currently designing internal tools and design systems at Apple. Case studies in enterprise UX, government platforms, and developer tooling.",
+    "Product designer with 9+ years of experience in enterprise UX, design systems, and internal tools. Case studies in enterprise UX, government platforms, and developer tooling.",
   keywords: [
     "product designer",
     "senior product designer",
@@ -51,9 +51,9 @@ export const metadata: Metadata = {
     canonical: "https://piyushmodi.com",
   },
   openGraph: {
-    title: "Piyush Modi — Product Designer at Apple",
+    title: "Piyush Modi — Senior Product Designer",
     description:
-      "Product designer with 9+ years of experience. Currently designing internal tools and design systems at Apple.",
+      "Product designer with 9+ years of experience in enterprise UX, design systems, and internal tools.",
     url: "https://piyushmodi.com",
     siteName: "Piyush Modi",
     type: "website",
@@ -63,7 +63,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Piyush Modi — Senior Product Designer",
     description:
-      "Product designer with 9+ years of experience. Currently designing internal tools and design systems at Apple.",
+      "Product designer with 9+ years of experience in enterprise UX, design systems, and internal tools.",
     creator: "@piyushmodi01",
   },
   robots: {
@@ -88,13 +88,50 @@ export default function RootLayout({
     name: "Piyush Modi",
     url: "https://piyushmodi.com",
     jobTitle: "Senior Product Designer",
-    worksFor: { "@type": "Organization", name: "Apple" },
     sameAs: [
       "https://www.linkedin.com/in/piyushmodi01/",
     ],
     email: "piyushmodi01@gmail.com",
     description:
       "Product designer with 9+ years of experience in enterprise UX, design systems, and internal tools.",
+    knowsAbout: [
+      "Product Design",
+      "Enterprise UX",
+      "Design Systems",
+      "Internal Tools",
+      "DesignOps",
+      "AI-assisted design workflows",
+      "Design Engineering",
+      "Accessibility",
+      "Usability Research",
+    ],
+    alumniOf: [
+      { "@type": "CollegeOrUniversity", name: "San Jose State University" },
+      { "@type": "CollegeOrUniversity", name: "Symbiosis International University" },
+    ],
+    hasOccupation: [
+      {
+        "@type": "OccupationRole",
+        roleName: "Product Designer",
+        startDate: "2022",
+        endDate: "2024",
+        namedEntity: { "@type": "Organization", name: "MathWorks" },
+      },
+      {
+        "@type": "OccupationRole",
+        roleName: "Product Researcher",
+        startDate: "2020",
+        endDate: "2021",
+        namedEntity: { "@type": "Organization", name: "Tapestry" },
+      },
+      {
+        "@type": "OccupationRole",
+        roleName: "Product Designer",
+        startDate: "2017",
+        endDate: "2020",
+        namedEntity: { "@type": "Organization", name: "Deloitte" },
+      },
+    ],
   };
 
   return (

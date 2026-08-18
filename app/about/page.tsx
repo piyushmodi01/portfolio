@@ -9,12 +9,12 @@ import { PrincipleCard } from "@/components/about/principle-card";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Product designer with 9+ years of experience. Started in computer science, moved into UX — Deloitte, Tapestry, MathWorks, and now Apple. Based in Sacramento, CA.",
+    "Product designer with 9+ years of experience. Started in computer science, moved into UX — Deloitte, Tapestry, MathWorks, and now designing for Apple. Based in Sacramento, CA.",
   alternates: { canonical: "https://piyushmodi.com/about" },
   openGraph: {
     title: "About · Piyush Modi",
     description:
-      "Product designer with 9+ years of experience. Started in computer science, moved into UX — Deloitte, Tapestry, MathWorks, and now Apple.",
+      "Product designer with 9+ years of experience. Started in computer science, moved into UX — Deloitte, Tapestry, MathWorks, and now designing for Apple.",
     url: "https://piyushmodi.com/about",
   },
 };
@@ -48,8 +48,8 @@ const PRINCIPLES = [
 
 const EXPERIENCE = [
   {
-    company: "Apple Inc.",
-    role: "Senior Product Designer, Contract",
+    company: "Apple",
+    role: "Senior Product Designer, Contract (via Red Oak Technologies)",
     period: "2025 — Present",
     description:
       "Internal tools and design systems for engineering and operations teams.",
@@ -117,9 +117,8 @@ export default function AboutPage() {
                   Since then: public sector platforms at Deloitte, e-commerce
                   research at Tapestry, a Human Factors masters at San Jose State,
                   and MathWorks in Boston, where I shipped features and maintained
-                  their design system. Apple came next. These days I design internal
-                  platforms across real estate and operations, used by thousands of
-                  people across the company every day.
+                  their design system. Designing for Apple came next. These days I design internal
+                  platforms used by thousands of people across the company every day.
                 </p>
                 <p>
                   I live in Sacramento with my wife, who reviews and approves design
@@ -223,8 +222,8 @@ export default function AboutPage() {
         </Reveal>
         <Reveal delay={60}>
           <p className="mt-6 max-w-[44ch] text-[1.02rem] leading-relaxed text-muted">
-            Reach out by email — or ask for a walkthrough of any case study. The
-            internal work is worth seeing in context.
+            Reach out by email — happy to talk through the thinking behind
+            any of the case studies.
           </p>
         </Reveal>
         <Reveal delay={100}>

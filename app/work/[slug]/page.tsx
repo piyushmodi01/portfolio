@@ -38,9 +38,27 @@ export default async function CaseStudyPage(props: {
   const cs = getCaseStudy(slug);
   if (!cs) notFound();
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "CreativeWork",
+    name: `${cs.client} — ${cs.title}`,
+    headline: cs.title,
+    description: cs.summary,
+    about: cs.client,
+    creator: { "@type": "Person", name: "Piyush Modi", url: "https://piyushmodi.com" },
+    author: { "@type": "Person", name: "Piyush Modi", url: "https://piyushmodi.com" },
+    url: `https://piyushmodi.com/work/${slug}`,
+    ...(cs.year ? { datePublished: cs.year } : {}),
+    ...(cs.scope?.length ? { keywords: cs.scope.join(", ") } : {}),
+  };
+
   return (
     <article className="pb-12">
       <ReadingProgress />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <MDXRemote
         source={cs.content}
         components={caseStudyMdxComponents}

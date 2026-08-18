@@ -78,7 +78,7 @@ export default function OGImage() {
               letterSpacing: "0.04em",
             }}
           >
-            Currently at Apple · 9+ years experience
+            Enterprise UX · Design Systems · 9+ years experience
           </div>
         </div>
       </div>

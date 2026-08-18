@@ -1,6 +1,6 @@
 # Piyush Modi — Senior Product Designer
 
-> Personal portfolio of Piyush Modi, a senior product designer with 9+ years of experience in enterprise UX, design systems, and internal tools. Currently at Apple.
+> Personal portfolio of Piyush Modi, a senior product designer with 9+ years of experience in enterprise UX, design systems, and internal tools. Currently designing for Apple.
 
 Site: https://piyushmodi.com
 
@@ -8,12 +8,22 @@ Site: https://piyushmodi.com
 
 Piyush Modi is a senior product designer based in Sacramento, CA. He designs internal tools, platforms, and design systems — the kind of software people open every morning and depend on to do their jobs.
 
-Career: Deloitte Consulting (2017–2020) → Tapestry via Publicis Sapient (2020–2021) → MathWorks (2022–2024) → Apple (2025–present). Also runs Capmov, a design consultancy side practice.
+Career: Deloitte Consulting (2017–2020) → Tapestry via Publicis Sapient (2020–2021) → MathWorks (2022–2024) → Contract Product Designer for Apple, via Red Oak Technologies (2025–present). Also runs Capmov, a design consultancy side practice.
 
 Education: MS Human-Computer Interaction, San Jose State University. BCA Computer Applications, Symbiosis International University.
 
 Contact: piyushmodi01@gmail.com
 LinkedIn: https://www.linkedin.com/in/piyushmodi01/
+
+## Current Role: Contract, for Apple
+
+For Apple, Piyush works across an enterprise product and the foundations around it: core workflows, shared design-system components, internal design tooling, and delivery practices. This is a contract Product Designer role (via Red Oak Technologies) with scope that has expanded into product ownership, design-system leadership, cross-application consistency, AI-assisted design workflows, and DesignOps. Specific internal product names, interfaces, data, and metrics are confidential and not disclosed publicly.
+
+## Core Pillars
+
+- Design Systems: built and maintained shared component libraries and governance across multiple organizations (Apple, MathWorks, Tapestry)
+- Enterprise UX: internal tools and platforms used by large organizations to run daily operations
+- Design Engineering: coded prototypes, browser/Sketch tooling, and AI-assisted design workflows with human review controls
 
 ## Case Studies
 
@@ -21,7 +31,7 @@ LinkedIn: https://www.linkedin.com/in/piyushmodi01/
 
 - [Designing Salesforce Forms for Government](https://piyushmodi.com/work/salesforce-forms): Configurable form platform for US government data collection at Deloitte. Two modes on one platform: conversational UI for citizens, traditional for case workers. Deployed across 5+ state programs.
 
-- [Apple Internal Products](https://piyushmodi.com/work/apple): Internal tools and design systems used by thousands of Apple employees daily. NDA — walkthrough available on request.
+- [Internal Tools & Design Systems](https://piyushmodi.com/work/apple): Contract product designer role. Internal enterprise platform and shared design system used daily by thousands of employees. Details confidential.
 
 ## Blog
 

@@ -25,7 +25,6 @@ export const WORK_TILES: WorkTile[] = [
       "Designing an enterprise product, shared components, and internal design tooling.",
     year: "2025 — Present",
     scope: ["Product Design", "Design Systems", "AI-enabled Workflows"],
-    cover: "/work/apple/hero.png",
     accentTint:
       "linear-gradient(135deg, rgba(42,75,255,0.12) 0%, rgba(17,17,17,0.06) 100%)",
   },
@@ -72,7 +71,6 @@ export function SelectedWork() {
           </div>
           <p className="max-w-md text-[1rem] leading-relaxed text-muted">
             Each of these took years and shipped to thousands of people.
-            Walkthroughs of internal work available on request.
           </p>
         </div>
 

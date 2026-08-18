@@ -171,7 +171,7 @@ Chapter, Pull, Tension, Callout, Decision, Moment (image + video + cropTop/cropB
 - MathWorks: hired part-time while still a student, went full-time after graduating, Boston, 1.5 years
 - Met his wife during MathWorks years (Boston), drove cross-country Boston → CA to marry her
 - Freelance agency "Capmov" (with a friend) — 9 months, branding + web + e-commerce for CA clients. Still does freelance work on weekends.
-- Apple: real estate + operations + internal tools
+- Apple: internal enterprise platform + design systems (NDA — no internal specifics to be used publicly)
 - Also: Lucas School of Business AI platform built during masters (on-campus job)
 - Lives in Sacramento, wife is a city planner for Sacramento, own their home (bought 2025)
 - Two cats: Zuko and Poppy (Zuko is black, visible in portrait)
