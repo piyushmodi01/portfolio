@@ -5,7 +5,6 @@ const COLUMNS: { heading: string; links: { label: string; href: string; external
   {
     heading: "Work",
     links: [
-      { label: "Apple", href: "/work/apple" },
       { label: "MathWorks", href: "/work/matlab-plot-viewer" },
       { label: "Deloitte", href: "/work/salesforce-forms" },
     ],

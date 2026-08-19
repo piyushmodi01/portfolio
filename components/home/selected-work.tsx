@@ -18,17 +18,6 @@ export type WorkTile = {
 
 export const WORK_TILES: WorkTile[] = [
   {
-    slug: "apple",
-    client: "Apple",
-    title: "Designing internal systems at scale.",
-    summary:
-      "Designing an enterprise product, shared components, and internal design tooling.",
-    year: "2025 — Present",
-    scope: ["Product Design", "Design Systems", "AI-enabled Workflows"],
-    accentTint:
-      "linear-gradient(135deg, rgba(42,75,255,0.12) 0%, rgba(17,17,17,0.06) 100%)",
-  },
-  {
     slug: "matlab-plot-viewer",
     client: "MathWorks",
     title: "Improving MATLAB's Plot Viewing Experience.",
@@ -66,7 +55,7 @@ export function SelectedWork() {
           <div>
             <Eyebrow number="01">Selected work</Eyebrow>
             <h2 className="display mt-4 text-[clamp(2rem,5.5vw,3.6rem)] leading-[1.05] tracking-tight max-w-[20ch]">
-              Three projects that say the most about how I work.
+              Two projects that say the most about how I work.
             </h2>
           </div>
           <p className="max-w-md text-[1rem] leading-relaxed text-muted">

@@ -31,8 +31,6 @@ For Apple, Piyush works across an enterprise product and the foundations around 
 
 - [Designing Salesforce Forms for Government](https://piyushmodi.com/work/salesforce-forms): Configurable form platform for US government data collection at Deloitte. Two modes on one platform: conversational UI for citizens, traditional for case workers. Deployed across 5+ state programs.
 
-- [Internal Tools & Design Systems](https://piyushmodi.com/work/apple): Contract product designer role. Internal enterprise platform and shared design system used daily by thousands of employees. Details confidential.
-
 ## Blog
 
 - [Are You Solving the Right UX Problem?](https://piyushmodi.com/blog/how-to-validate-true-user-needs): Two quick techniques — 5 Whys and So What? — to find the real problem before designing.

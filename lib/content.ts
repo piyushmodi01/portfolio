@@ -12,6 +12,7 @@ export type CaseStudyMeta = {
   summary: string;
   cover?: string;
   order: number;
+  hidden?: boolean;
 };
 
 export type ContentItem<M> = M & { content: string };
@@ -35,7 +36,9 @@ function readFolder<M extends { slug?: string }>(
 
 export function getCaseStudies(): ContentItem<CaseStudyMeta>[] {
   const items = readFolder<CaseStudyMeta>("case-studies");
-  return items.sort((a, b) => (a.order ?? 99) - (b.order ?? 99));
+  return items
+    .filter((it) => !it.hidden)
+    .sort((a, b) => (a.order ?? 99) - (b.order ?? 99));
 }
 
 export function getCaseStudy(

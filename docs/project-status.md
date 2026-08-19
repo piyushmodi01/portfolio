@@ -35,7 +35,7 @@ Next.js 16 App Router, TypeScript strict, Tailwind v4, Framer Motion, Lenis, nex
 - **CTA**: email + resume
 
 ### Case Studies
-- `/work/apple` — dark cinematic hero (no image), full narrative, NDA
+- `/work/apple` — hidden (frontmatter `hidden: true`), noindex, unlinked. Kept in repo, not shown anywhere on the live site.
 - `/work/matlab-plot-viewer` — imageFit="fade" hero, all real assets, complete
 - `/work/salesforce-forms` — dark green cinematic hero, picsum placeholders for DCF images
 

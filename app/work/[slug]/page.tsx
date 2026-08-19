@@ -28,6 +28,9 @@ export async function generateMetadata(props: {
       url: `https://piyushmodi.com/work/${slug}`,
       type: "article",
     },
+    ...(cs.hidden
+      ? { robots: { index: false, follow: false, nocache: true } }
+      : {}),
   };
 }
 
